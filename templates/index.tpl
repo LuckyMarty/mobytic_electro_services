@@ -222,7 +222,7 @@
     <div class="row">
       <div class="col-sm-12 featured-products title">
         <div>
-          <img src="themes/mobytic/assets/img/Group-23.png">
+          <img src="{$urls.theme_assets}img/do-not-delete/Group-23.png">
           <h2 class="h2 products-section-title text-uppercase">
             bienvenue chez electro services
           </h2>
@@ -240,7 +240,7 @@
         <a href="#"><span>En savoir plus ></span></a>
       </div>
       <div class="col-sm-4 logo">
-        <img class="img-fluid" src="themes/mobytic/assets/img/LOGO-ELECTRO-SERVICES-HD.png" alt="Mobytic"
+        <img class="img-fluid" src="{$urls.theme_assets}img/do-not-delete/LOGO-ELECTRO-SERVICES-HD.png" alt="Mobytic"
           width="auto" height="100">
         </div>
       </div>

@@ -4,6 +4,10 @@
 
 #block-reassurance {
   margin-top: 2rem;
+  
+  &:first-child {
+    margin-top: 0;
+  }
 
   img {
     width: 1.563rem;
