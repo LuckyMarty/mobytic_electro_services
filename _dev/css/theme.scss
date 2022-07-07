@@ -43,6 +43,10 @@
     color: $mobytic_color_1;
 }
 
+body {
+    background-color: $mobytic_color_2;
+}
+
 
 #header {
     .header-top {
@@ -172,15 +176,27 @@
 }
 
 
+#footer {
+    background-color: $mobytic_color_5;
+}
+
+
 
 #wrapper {
     padding-top: 0;
+    background: initial;
+}
+
+.mobytic_home_behind_hook_bg {
+    background-color: $mobytic_color_5;
 }
 
 
 
 
 #mobytic_homepage_cards {
+    margin-top: 60px;
+
     .row {
         display: flex;
         align-items: stretch;
@@ -225,7 +241,7 @@
                     justify-content: center;
 
                     >div {
-                        width: calc(50% - var(--gap));
+                        width: 100%;
 
                         >ul {
                             margin: 10px 0;
@@ -235,13 +251,13 @@
 
                                 a {
                                     color: $mobytic_color_1;
-                                    font-size: $mobytic_font_size_xm;
+                                    font-size: $mobytic_font_size_xs;
                                 }
 
                                 &:before {
                                     content: ">";
                                     margin-right: 5px;
-                                    font-size: $mobytic_font_size_xm;
+                                    font-size: $mobytic_font_size_xs;
                                 }
                             }
 
@@ -255,22 +271,42 @@
 
 
 #mobytic_5_blocks_home {
+    --gap: 20px;
     .row {
         padding: 0;
+
+        .col-sm-3,
+        .col-sm-6 {
+            padding: 0 10px;
+        }
 
         >div>div {
             min-height: 200px;
             background-color: cadetblue;
-            margin: 20px 0;
+            margin: var(--gap) 0;
             position: relative;
 
+            .title,
             .mobytic_button {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 230px;
-                height: 60px;
+                text-transform: uppercase;
+            }
+            
+            .title {
+                color: $mobytic_color_1;
+                font-size: $mobytic_font_size_xxl;
+                width: 100%;
+                padding: 0 10px;
+                text-align: center;
+            }
+            
+            .mobytic_button {
+                color: $mobytic_color_2;
+                font-size: $mobytic_font_size_xxl;
+                padding: 10px 25px;
                 border-radius: 20px;
                 background-color: $mobytic_color_4;
             }
@@ -279,7 +315,38 @@
         >div:nth-child(2)>div {
             background-color: aquamarine;
             height: 420px;
-            margin: 20px 0;
+            margin: var(--gap) 0;
+        }
+    }
+}
+
+
+
+#mobytic_welcome_home {
+    .title {
+        margin-bottom: 0px !important;
+    }
+
+    p {
+        color: $mobytic_color_1;
+        font-size: $mobytic_font_size_sm;
+    }
+
+    a {
+        color: $mobytic_color_1;
+        font-weight: bold;
+        font-size: $mobytic_font_size_sm;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 100px !important;
+            width: auto;
         }
     }
 }
@@ -290,6 +357,8 @@
 
 
 .featured-products {
+    margin: 30px 0 !important;
+
     >div {
         display: flex;
         align-items: center;

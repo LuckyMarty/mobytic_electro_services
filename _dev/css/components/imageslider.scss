@@ -24,7 +24,7 @@
       left: 15%;
       max-width: 400px;
       color: $mobytic_color_3;
-      transform: translate(0,-50%);
+      transform: translate(0, -50%);
 
       .caption-description {
         p {
@@ -67,23 +67,30 @@
       }
 
       i {
-        font-size: 3.125rem;
-        color: $white;
+        font-size: 30px;
+        color: $mobytic_color_2;
+        background: $mobytic_color_4;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       &:hover {
         i {
-          color: $brand-primary;
+          color: $mobytic_color_2;
         }
       }
     }
 
     .icon-prev {
-      left: 1rem;
+      left: 35px;
     }
 
     .icon-next {
-      right: 2rem;
+      right: 35px;
     }
 
     &.left,
@@ -129,6 +136,7 @@
     box-shadow: none;
 
     .carousel-control {
+
       .icon-prev,
       .icon-next {
         width: auto;
@@ -149,6 +157,7 @@
         }
 
         .caption-description {
+
           h3,
           p {
             color: $gray;
@@ -209,6 +218,7 @@
     }
 
     .carousel-control {
+
       .icon-prev,
       .icon-next {
         i {

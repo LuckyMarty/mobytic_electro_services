@@ -79,7 +79,6 @@ global_settings:
         - ps_newproducts
         - ps_bestsellers
       displayFooterBefore:
-        - ps_emailsubscription
         - ps_socialfollow
         - blockreassurance
       displayFooter:
