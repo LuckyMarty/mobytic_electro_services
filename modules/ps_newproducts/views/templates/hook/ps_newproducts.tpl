@@ -25,7 +25,7 @@
 
 <section class="featured-products clearfix mt-3">
   <div>
-    <img src="themes/mobytic/modules/ps_newproducts/assets/img/group-23.png">
+    <img src="{$urls.theme_assets}img/do-not-delete/Group-23.png">
     <h2 class="h2 products-section-title text-uppercase">
       {l s='New products' d='Shop.Theme.Catalog'}
     </h2>

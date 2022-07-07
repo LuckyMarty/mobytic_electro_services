@@ -37,7 +37,7 @@
 <div class="mobytic_home_behind_hook_bg">
   <div class="container" id="mobytic_5_blocks_home">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <div>
           <a href=#>
             <div class="title">Nos marques</div>
@@ -49,14 +49,14 @@
           </a>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-md-6">
         <div>
           <a href=#>
             <div class="mobytic_button">Découvrir</div>
           </a>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <div>
           <a href=#>
             <div class="title">Lorem Ipsum</div>
