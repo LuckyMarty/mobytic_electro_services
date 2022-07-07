@@ -133,6 +133,14 @@ body {
             #_mobile_cart {
                 width: 10%;
             }
+
+            #_mobile_user_info img {
+
+                @media screen and (max-width: $mobytic_responsive_mobile) {
+                    height: 24px;
+                    padding: 2px;
+                }
+            }
         }
 
         #_mobile_top_menu {
@@ -189,6 +197,7 @@ body {
 
 .mobytic_home_behind_hook_bg {
     background-color: $mobytic_color_5;
+    padding-top: 1px;
 }
 
 
