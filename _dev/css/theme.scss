@@ -181,34 +181,72 @@
 
 
 #mobytic_homepage_cards {
-    .mobytic_card {
-        > div {
-            background: white;
-            padding: 5px;
-            box-shadow: 0px 0px 6px 0px black;
+    .row {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
 
-            &:first-child {
-                margin-left: 0;
+        .mobytic_card {
+            margin: 15px 0;
+
+            @media screen and (max-width: $mobytic_responsive_tablet) {
+                width: 50%;
             }
 
-            .header {
-                height: 70px;
-                background-color: gray;
-            }
+            >div {
+                height: 100%;
+                border-radius: 20px;
+                background: white;
+                padding: 5px;
+                box-shadow: 0px 0px 6px 0px black;
 
-            .title {
-                background-color: $mobytic_color_4;
-                color: $mobytic_color_2;
-                text-align: center;
-            }
+                &:first-child {
+                    margin-left: 0;
+                }
 
-            .content {
-                display: flex;
-                --gap: 10px;
-                gap: --gap;
+                .header {
+                    border-radius: 18px;
+                    height: 70px;
+                    background-color: gray;
+                }
 
-                >div {
-                    width: calc(50% - var(--gap));
+                .title {
+                    border-radius: 50px;
+                    margin: 5px;
+                    background-color: $mobytic_color_4;
+                    color: $mobytic_color_2;
+                    text-align: center;
+                }
+
+                .content {
+                    display: flex;
+                    --gap: 5px;
+                    gap: --gap;
+                    justify-content: center;
+
+                    >div {
+                        width: calc(50% - var(--gap));
+
+                        >ul {
+                            margin: 10px 0;
+                            padding: 0 5px;
+
+                            li {
+
+                                a {
+                                    color: $mobytic_color_1;
+                                    font-size: $mobytic_font_size_xm;
+                                }
+
+                                &:before {
+                                    content: ">";
+                                    margin-right: 5px;
+                                    font-size: $mobytic_font_size_xm;
+                                }
+                            }
+
+                        }
+                    }
                 }
             }
         }

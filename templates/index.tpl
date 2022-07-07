@@ -64,25 +64,27 @@
             <div class="col-sm-6 col-md-3 mobytic_card">
               <div>
                 <div class="header"></div>
-                <div class="title">Appareillage XX</div>
+                <a href="#"><div class="title">Appareillage XX</div></a>
                 <div class="content">
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
+                      </li>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
 
@@ -93,25 +95,25 @@
             <div class="col-sm-6 col-md-3 mobytic_card">
               <div>
                 <div class="header"></div>
-                <div class="title">Appareillage XX</div>
+                <a href="#"><div class="title">Appareillage XX</div></a>
                 <div class="content">
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
 
@@ -122,25 +124,25 @@
             <div class="col-sm-6 col-md-3 mobytic_card">
               <div>
                 <div class="header"></div>
-                <div class="title">Appareillage XX</div>
+                <a href="#"><div class="title">Appareillage XX</div></a>
                 <div class="content">
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
 
@@ -151,25 +153,25 @@
             <div class="col-sm-6 col-md-3 mobytic_card">
               <div>
                 <div class="header"></div>
-                <div class="title">Appareillage XX</div>
+                <a href="#"><div class="title">Appareillage XX</div></a>
                 <div class="content">
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
-                      <li><a href="">Lorem Ipsum</>
+                      <li><a href="">Lorem Ipsum</a>
                       </li>
                     </ul>
 
