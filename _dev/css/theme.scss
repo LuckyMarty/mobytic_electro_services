@@ -391,3 +391,54 @@ body {
 .mobytic_slider {
     overflow: hidden;
 }
+
+
+
+#product {
+    #mobytic_breadcrumb_product {
+        background-color: $mobytic_color_5;
+
+        .breadcrumb {
+            margin: 0;
+            padding: 10px 0;
+
+            ol {
+                li {
+                    a, span {
+                        color: $mobytic_color_6;
+                    }
+                }
+            }
+        }
+    }
+
+    .js-product-container {
+        margin-top: 15px;
+
+        .mobytic {
+            @media (min-width: $mobytic_responsive_mobile) {
+                padding-left: 0;    
+            }
+
+            &-right {
+                &-top {
+                    background-color: $mobytic_color_5;
+                    padding: 40px;
+                }
+                
+                &-bottom {
+                    padding: 40px;
+
+                    .blockreassurance_product {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        > div {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

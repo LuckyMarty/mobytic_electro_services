@@ -220,7 +220,7 @@
 
   <div class="container" id="mobytic_welcome_home">
     <div class="row">
-    {hook h='displayMobyticHomeUnder'}
+    {* {hook h='displayMobyticHomeUnder'} *}
     </div>
   </div>
 
