@@ -1,3 +1,12 @@
+$mobytic_color_1: #371313;
+$mobytic_color_2: white;
+$mobytic_color_3: black;
+$mobytic_color_4: #EB1212;
+$mobytic_color_5: #F6F6F6;
+
+
+
+
 $white: #fff;
 $black: #000;
 $gray-dark: #363a42;
@@ -9,12 +18,12 @@ $gray-light-second: #dbdbdb;
 $gray-lighter: #f6f6f6;
 $gray-lighter-second: #f7f7f7;
 $border-gray: #ddd;
-$brand-primary: #24b9d7;
-$brand-secondary: #f39d72;
+$brand-primary: $mobytic_color_4;
+$brand-secondary: $mobytic_color_4;
 $brand-success: #4cbb6c;
 $brand-warning: #ff9a52;
 $brand-danger: #ff4c4c;
-$current-step-color: #00c062;
+$current-step-color: $mobytic_color_3;
 $label-color: $gray-darker;
 $btn-primary-color: $white;
 $btn-primary-bg: $brand-primary;
@@ -68,12 +77,6 @@ $radio-border-color: #979797;
 $mobytic_responsive_mobile: 768px;
 $mobytic_responsive_tablet: 992px;
 $mobytic_responsive_laptop: 992px;
-
-$mobytic_color_1: #371313;
-$mobytic_color_2: white;
-$mobytic_color_3: black;
-$mobytic_color_4: #EB1212;
-$mobytic_color_5: #F6F6F6;
 
 $mobytic_font_1: 'riffic_freebold';
 $mobytic_font_2: 'Tahoma';

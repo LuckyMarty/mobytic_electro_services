@@ -54,6 +54,10 @@ global_settings:
     to_enable:
       - ps_linklist
   hooks:
+    custom_hooks:
+      - name: displayMobyticHomeUnder
+        title: displayMobyticHomeUnder
+        description: Add under Home Page Content
     modules_to_hook:
       displayAfterBodyOpeningTag:
         - blockreassurance
