@@ -29,7 +29,10 @@
         <li>
           <div class="block-reassurance-item">
             <img src="{$element.image}" alt="{$element.text}" loading="lazy">
-            <span class="h6">{$element.text}</span>
+            <div>
+              <div class="h6">{$element.title}</div>
+              <div class="h6">{$element.description}</div>
+            </div>
           </div>
         </li>
       {/foreach}
