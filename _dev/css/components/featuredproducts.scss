@@ -178,6 +178,7 @@ $product-description-height: 70px;
       min-width: 3.125rem;
       min-height: 1.875rem;
       font-weight: 600;
+      border-radius: $mobytic_border_radius_flags_btn;
 
       &.online-only {
         top: 13.1rem;

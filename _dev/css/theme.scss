@@ -395,6 +395,10 @@ body {
 
 
 #product {
+    .add .btn {
+        border-radius: $mobytic_border_radius_flags_btn;
+    }
+    
     #mobytic_breadcrumb_product {
         background-color: $mobytic_color_5;
 

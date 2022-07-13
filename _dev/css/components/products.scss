@@ -246,6 +246,7 @@
     color: $white;
     text-transform: uppercase;
     background: $brand-secondary;
+    border-radius: $mobytic_border_radius_flags_btn;
   }
 }
 
@@ -705,6 +706,7 @@
     word-break: break-word;
     pointer-events: auto;
     background: $brand-primary;
+    border-radius: $mobytic_border_radius_flags_btn;
 
     &.online-only {
       position: absolute;
@@ -726,6 +728,7 @@
     &.discount-amount,
     &.discount {
       background-color: $mobytic_color_4;
+      border-radius: $mobytic_border_radius_flags_btn;
     }
 
     &.on-sale {
