@@ -59,7 +59,7 @@ body#checkout {
   .custom-checkbox {
     display: flex;
 
-    > label {
+    >label {
       padding-left: 1.5rem;
     }
 
@@ -93,16 +93,16 @@ body#checkout {
     }
 
     .step-title {
-      padding-bottom: 1.25rem;
+      padding-bottom: 0;
       margin-bottom: 0;
-      font-size: 1.5rem;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: bold;
       text-transform: uppercase;
       cursor: pointer;
       border-bottom: 1px solid $border-gray;
     }
 
-    &.-current + .checkout-step {
+    &.-current+.checkout-step {
       .step-title {
         padding-top: 1.25rem;
         border-top: 1px solid $border-gray;
@@ -158,6 +158,7 @@ body#checkout {
     }
 
     &.-current.-reachable.-complete {
+
       .done,
       .step-edit {
         display: none;
@@ -179,20 +180,27 @@ body#checkout {
         justify-content: center;
         width: 33px;
         height: 33px;
-        margin-right: 0.65rem;
+        margin: 0 0 -1px 0;
         font-size: 1rem;
         color: $white;
         vertical-align: middle;
         background-color: $current-step-color;
         border: none;
-        border-radius: 50%;
+        border-radius: 0;
       }
     }
 
     &.-reachable.-complete {
       h1 {
         .done {
-          display: inline-block;
+          display: inline-flex;
+          margin-right: 0;
+          color: white;
+          width: 32px;
+          height: 32px;
+          background-color: $brand-success;
+          justify-content: center;
+          align-items: center;
         }
 
         .step-number {
@@ -238,7 +246,7 @@ body#checkout {
       margin-top: 3.75rem;
     }
 
-    .checkbox-field + .checkbox-field div {
+    .checkbox-field+.checkbox-field div {
       margin-top: 0;
     }
 
@@ -275,12 +283,11 @@ body#checkout {
       justify-content: center;
       width: 33px;
       height: 33px;
-      margin-right: 1rem;
-      margin-left: 0.5rem;
+      margin: 0;
       font-size: 1rem;
       vertical-align: middle;
-      border: 1px solid $gray-darker;
-      border-radius: 50%;
+      border: 1px solid $gray;
+      border-radius: 0;
     }
 
     .address-selector {
@@ -296,7 +303,7 @@ body#checkout {
       background: $gray-lighter;
       border: 3px solid transparent;
 
-      > header {
+      >header {
         min-height: 11.7rem;
       }
 
@@ -369,7 +376,7 @@ body#checkout {
     }
 
     .delivery-options {
-      > .row {
+      >.row {
         border-right: 0.1rem solid darken($gray-lighter, 20%);
       }
 
@@ -380,7 +387,7 @@ body#checkout {
         background: $gray-lighter;
 
         &,
-        label > .row,
+        label>.row,
         .carrier {
           display: flex;
           flex-wrap: wrap;
@@ -396,7 +403,7 @@ body#checkout {
             margin-left: 0;
 
             &:not(.#{$carrier-selector}-hasLogo) {
-              > .col-xs-12 {
+              >.col-xs-12 {
                 padding-left: calc(33.33333% + 15px);
               }
             }
@@ -587,7 +594,7 @@ body#checkout {
   }
 
   #delivery {
-    > label {
+    >label {
       text-align: left;
     }
   }
@@ -595,12 +602,12 @@ body#checkout {
   #hook-display-after-carrier {
     margin-top: 20px;
 
-    > [class^="col"] {
+    >[class^="col"] {
       display: inline-block;
       float: inherit;
 
       &.links {
-        .row > [class^="col"] {
+        .row>[class^="col"] {
           width: auto;
         }
       }
@@ -613,7 +620,7 @@ body#checkout {
   padding-left: 1.3rem;
   margin-top: 1.25rem;
 
-  > .card-title {
+  >.card-title {
     margin-bottom: $large-space;
   }
 
@@ -743,7 +750,7 @@ body#checkout {
 
   body#checkout section.checkout-step .delivery-options .delivery-option {
     .carrier {
-      > .col-xs-12 {
+      >.col-xs-12 {
         padding-left: 0;
       }
     }
@@ -752,7 +759,6 @@ body#checkout {
 
 @include media-breakpoint-down(sm) {
   body#checkout section.checkout-step.-reachable.-complete h1 .step-edit {
-    float: none;
     margin-top: 0.25rem;
     margin-left: $medium-space;
   }
@@ -858,5 +864,129 @@ body#checkout {
     .accept-cgv {
       display: block;
     }
+  }
+}
+
+
+
+
+
+
+
+#checkout {
+  #wrapper {
+    // background-color: $mobytic_color_1;
+  }
+}
+
+
+.mobytic_checkout {
+
+  .form-control:focus,
+  .input-group.focus {
+    outline: .1875rem solid $mobytic_color_1;
+  }
+
+  .form-control-label {
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  .form-control-comment {
+    text-align: end;
+  }
+
+  .form-control {
+    background: white;
+  }
+
+
+  >.row {
+    >div:nth-child(1) {
+      padding-right: 100px;
+
+      @media (max-width: $mobytic_responsive_mobile) {
+        padding: 20px;
+      }
+
+      #checkout-personal-information-step {
+        >.content {
+          padding: 0;
+
+          #customer-form {}
+        }
+      }
+    }
+
+
+    >div:nth-child(2) {
+      @media (max-width: $mobytic_responsive_mobile) {
+        width: 90%;
+      }
+
+      #js-checkout-summary {
+        background: transparent;
+      }
+
+      .cart-summary-products {
+        .title {
+          text-transform: uppercase;
+          font-size: 18px;
+          color: $gray-darker;
+        }
+
+        span {
+          text-transform: initial;
+          font-size: 14px;
+        }
+      }
+
+      .media-list {
+        .media {
+          border-top: 1px solid $border-gray;
+          padding-top: 15px;
+          margin-top: 15px;
+
+          &:first-child {
+            border-top: unset;
+            padding-top: unset;
+          }
+
+          .media-left {
+            width: 25%;
+
+            img {
+              width: 100% !important;
+            }
+          }
+
+          .media-body {
+
+            .row {
+              display: flex;
+              align-items: center;
+
+              .product-name a,
+              .product-price {
+                color: $mobytic_color_1;
+                font-weight: bold;
+              }
+
+              .product-quantity {
+                border: 1px solid black;
+                padding: 2px;
+                align-items: center;
+                justify-content: center;
+                height: 30px;
+                width: 30px;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
   }
 }

@@ -37,7 +37,7 @@
 <div class="mobytic_home_behind_hook_bg">
   <div class="container" id="mobytic_5_blocks_home">
     <div class="row">
-      <div class="col-md-3">
+      {* <div class="col-md-3">
         <div>
           <a href=#>
             <div class="title">Nos marques</div>
@@ -48,15 +48,15 @@
             <div class="title">Lorem Ipsum</div>
           </a>
         </div>
-      </div>
-      <div class="col-md-6">
+      </div> *}
+      {* <div class="col-md-6">
         <div>
           <a href=#>
             <div class="mobytic_button">Découvrir</div>
           </a>
         </div>
-      </div>
-      <div class="col-md-3">
+      </div> *}
+      {* <div class="col-md-3">
         <div>
           <a href=#>
             <div class="title">Lorem Ipsum</div>
@@ -68,7 +68,7 @@
           </a>
         </div>
 
-      </div>
+      </div> *}
     </div>
     {$HOOK_HOME nofilter}
   </div>
@@ -220,31 +220,9 @@
 
   <div class="container" id="mobytic_welcome_home">
     <div class="row">
-      <div class="col-sm-12 featured-products title">
-        <div>
-          <img src="{$urls.theme_assets}img/do-not-delete/Group-23.png">
-          <h2 class="h2 products-section-title text-uppercase">
-            bienvenue chez electro services
-          </h2>
-        </div>
-      </div>
-      <div class="col-sm-8">
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem.
-        </p>
-        <a href="#"><span>En savoir plus ></span></a>
-      </div>
-      <div class="col-sm-4 logo">
-        <img class="img-fluid" src="{$urls.theme_assets}img/do-not-delete/LOGO-ELECTRO-SERVICES-HD.png" alt="Mobytic"
-          width="auto" height="100">
-        </div>
-      </div>
+    {hook h='displayMobyticHomeUnder'}
     </div>
+  </div>
 
     {widget name='blockreassurance'}
 
