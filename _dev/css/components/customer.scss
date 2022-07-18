@@ -69,6 +69,53 @@
       padding-left: 0.625rem;
     }
   }
+
+
+  #mobytic_breadcrumb_product {
+    display: none;
+  }
+
+  #main {
+    background-color: #ddd;
+    width: 40%;
+    margin: 50px auto;
+    display: flow-root;
+
+    @media (max-width: $mobytic_responsive_tablet) {
+      width: 100%;
+    }
+
+    .page-header {
+      margin: 25px auto;
+
+      h1 {
+        text-align: center;
+      }
+    }
+
+    #content {
+      background-color: transparent;
+
+      #login-form,
+      .register-form {
+        .form-group {
+          label {
+            text-align: left;
+          }
+
+          .form-control {
+            background: white;
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+
+    .page-content,
+    .page-footer {
+      margin-bottom: 0;
+    }
+  }
 }
 
 #identity,
@@ -329,7 +376,7 @@
         border-bottom: 0;
       }
 
-      > div {
+      >div {
         margin-bottom: 0.5rem;
       }
     }
@@ -353,6 +400,38 @@
 
 /*** My account landing page ***/
 .page-my-account {
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .page-header {
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  .page-footer {
+
+    @media (max-width: $mobytic_responsive_mobile) {
+      text-align: center;
+    }
+    >div {
+      a {
+        padding: 10px 25px;
+        background: $mobytic_color_4;
+        color: $mobytic_color_2;
+        text-transform: uppercase;
+        display: inline-flex;
+        gap: 10px;
+
+        i {
+          font-size: 20px;
+          color: $mobytic_color_2;
+        }
+      }
+    }
+  }
+
   #content {
     .links {
       display: flex;
@@ -373,6 +452,8 @@
           display: block;
           height: 100%;
           @include customer-area-base-box();
+
+          border: 1px solid rgba(0, 0, 0, 0.07);
         }
 
         i {

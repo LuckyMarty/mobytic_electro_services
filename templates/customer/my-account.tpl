@@ -103,7 +103,8 @@
 {block name='page_footer'}
   {block name='my_account_links'}
     <div class="text-sm-center">
-      <a href="{$urls.actions.logout}" >
+      <a href="{$urls.actions.logout}">
+        <i class="material-icons"></i>
         {l s='Sign out' d='Shop.Theme.Actions'}
       </a>
     </div>

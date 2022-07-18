@@ -8,6 +8,11 @@
 
 .cart-item {
   padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  
+  &:last-child {
+    border-bottom: 0;
+  }
 
   .product-line-grid {
     display: flex;
@@ -124,6 +129,7 @@
       margin-bottom: 0;
       font-size: 1.5rem;
       font-weight: 400;
+      text-align: center;
     }
   }
 
@@ -387,11 +393,12 @@
 #checkout {
   .cart-grid-right {
 
-    margin-top: 50px;
-    border-radius: 15px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    // border-radius: 15px;
     background: $mobytic_color_5;
-    box-shadow: 20px 20px 60px #d9d9d9,
-      -20px -20px 60px $mobytic_color_5;
+    // box-shadow: 20px 20px 60px #d9d9d9,
+    //   -20px -20px 60px $mobytic_color_5;
 
       @media (max-width: $mobytic_responsive_mobile) {
         padding: 25px;
