@@ -25,7 +25,8 @@
 {extends file='customer/page.tpl'}
 
 {block name='page_title'}
-  {l s='Your account' d='Shop.Theme.Customeraccount'}
+  Bonjour {$customer.firstname} {$customer.lastname} !
+  {* {l s='Your account' d='Shop.Theme.Customeraccount'} *}
 {/block}
 
 {block name='page_content'}

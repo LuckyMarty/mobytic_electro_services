@@ -25,7 +25,47 @@
 <div id="_desktop_user_info">
   <div class="user-info">
     {if $logged}
+      <div class="hidden-sm-down">
       <a
+      class="logout"
+    >
+    <span><img src="{$urls.theme_assets}img/do-not-delete/Icon feather-user.png"></span>
+    </a>
+
+    <div id="mobytic_customer_logged_dropdown">
+      <ul>
+        <li><a href="{$urls.pages.my_account}" rel="nofollow">
+        <i class="material-icons"></i>
+        <div>
+        {l s='My account' d='Shop.Theme.Customeraccount'}
+        </div>
+        </a></li>
+        <li><a href="{$urls.pages.my_account}" rel="nofollow">
+        <i class="material-icons"></i>
+        <div>
+        {l s='Sign out' d='Shop.Theme.Actions'}
+        </div>
+        </a></li>
+      </ul>
+    </div>
+      </div>
+
+
+      <a
+        class="account"
+        href="{$urls.pages.my_account}"
+        title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
+        rel="nofollow"
+      >
+        <i class="material-icons hidden-md-up logged">&#xE7FF;</i>
+        <span class="hidden-sm-down">{$customerName}</span>
+      </a>
+
+
+
+
+
+      {* <a
         class="logout hidden-sm-down"
         href="{$urls.actions.logout}"
         rel="nofollow"
@@ -41,7 +81,7 @@
       >
         <i class="material-icons hidden-md-up logged">&#xE7FF;</i>
         <span class="hidden-sm-down">{$customerName}</span>
-      </a>
+      </a> *}
     {else}
       <a
         href="{$urls.pages.authentication}?back={$urls.current_url|urlencode}"

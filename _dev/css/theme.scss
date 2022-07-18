@@ -80,7 +80,10 @@ body {
             }
 
             #_desktop_user_info {
+                position: relative;
+
                 .user-info {
+
                     a {
                         display: flex;
                         flex-wrap: wrap;
@@ -91,6 +94,44 @@ body {
                             width: 100%;
                             color: $mobytic_color_1;
                         }
+
+                    }
+
+                    &:hover #mobytic_customer_logged_dropdown {
+                        display: block !important;
+                    }
+
+                    #mobytic_customer_logged_dropdown {
+                        display: none;
+                        position: absolute;
+                        background: white;
+                        bottom: -112%;
+                        z-index: 9;
+                        padding: 5px 25px;
+                        width: 220px;
+                        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .2);
+
+                        ul {
+                            margin: 20px 0;
+
+                            a {
+                                display: flex;
+
+
+                                i {
+                                    font-size: 20px;
+                                    width: 20px;
+                                }
+
+                                >div {
+                                    flex: 1;
+                                    text-align: left;
+                                }
+                            }
+                        }
+
+
+
                     }
                 }
             }
@@ -452,11 +493,14 @@ body {
 
 
 
-
+#my-account,
 #authentication,
 #identity,
 #addresses,
-#address {
+#address,
+#history,
+#order-slip,
+#module-psgdpr-gdpr {
     #mobytic_breadcrumb_product {
         display: none;
     }
@@ -487,7 +531,7 @@ body {
 #addresses {
     .mobytic_address {
         margin-bottom: 0;
-        
+
         @media (max-width: $mobytic_responsive_mobile) {
             margin-bottom: 25px;
 
