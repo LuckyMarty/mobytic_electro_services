@@ -303,7 +303,7 @@ body {
 //                 transform: translate(-50%, -50%);
 //                 text-transform: uppercase;
 //             }
-            
+
 //             .title {
 //                 color: $mobytic_color_1;
 //                 font-size: $mobytic_font_size_xxl;
@@ -311,7 +311,7 @@ body {
 //                 padding: 0 10px;
 //                 text-align: center;
 //             }
-            
+
 //             .mobytic_button {
 //                 color: $mobytic_color_2;
 //                 font-size: $mobytic_font_size_xxl;
@@ -398,7 +398,7 @@ body {
     .add .btn {
         border-radius: $mobytic_border_radius_flags_btn;
     }
-    
+
     #mobytic_breadcrumb_product {
         background-color: $mobytic_color_5;
 
@@ -408,7 +408,9 @@ body {
 
             ol {
                 li {
-                    a, span {
+
+                    a,
+                    span {
                         color: $mobytic_color_6;
                     }
                 }
@@ -421,7 +423,7 @@ body {
 
         .mobytic {
             @media (min-width: $mobytic_responsive_mobile) {
-                padding-left: 0;    
+                padding-left: 0;
             }
 
             &-right {
@@ -429,7 +431,7 @@ body {
                     background-color: $mobytic_color_5;
                     padding: 40px;
                 }
-                
+
                 &-bottom {
                     padding: 40px;
 
@@ -437,11 +439,112 @@ body {
                         display: flex;
                         flex-wrap: wrap;
 
-                        > div {
+                        >div {
                             width: 50%;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+
+
+
+#authentication,
+#identity,
+#addresses,
+#address {
+    #mobytic_breadcrumb_product {
+        display: none;
+    }
+
+    .page-header {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    form {
+        .form-group {
+            .form-control-label {
+                text-align: left;
+            }
+
+            .form-control-comment {
+                text-align: right;
+            }
+
+            .form-control {
+                background: white;
+                border: 1px solid black;
+            }
+        }
+    }
+}
+
+#addresses {
+    .mobytic_address {
+        margin-bottom: 0;
+        
+        @media (max-width: $mobytic_responsive_mobile) {
+            margin-bottom: 25px;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        article {
+            // border: 1px solid $mobytic_color_6;
+            background: $mobytic_color_5;
+            margin: 0;
+
+            .address-footer {
+                border-top: 1px solid $mobytic_color_2;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                gap: 10px;
+                text-align: center;
+
+                a {
+                    background: red;
+                    padding: 10px;
+                    margin: 0;
+                    flex: 1;
+
+                    i,
+                    span {
+                        color: white;
+                    }
+
+                    &:hover {
+                        background: $mobytic_color_1;
+                    }
+                }
+            }
+        }
+    }
+
+    .addresses-footer {
+        margin: 0 25px;
+
+        a {
+            background: red;
+            padding: 10px;
+            margin: 0;
+            flex: 1;
+
+            i,
+            span {
+                color: white;
+            }
+
+            &:hover {
+                background: $mobytic_color_1;
             }
         }
     }

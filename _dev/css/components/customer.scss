@@ -70,11 +70,6 @@
     }
   }
 
-
-  #mobytic_breadcrumb_product {
-    display: none;
-  }
-
   #main {
     background-color: #ddd;
     width: 40%;
@@ -95,20 +90,6 @@
 
     #content {
       background-color: transparent;
-
-      #login-form,
-      .register-form {
-        .form-group {
-          label {
-            text-align: left;
-          }
-
-          .form-control {
-            background: white;
-            border: 1px solid black;
-          }
-        }
-      }
     }
 
     .page-content,
@@ -403,11 +384,6 @@
 
   .breadcrumb {
     display: none;
-  }
-
-  .page-header {
-    margin: 25px 0;
-    text-align: center;
   }
 
   .page-footer {
