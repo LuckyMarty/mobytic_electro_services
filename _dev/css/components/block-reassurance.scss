@@ -4,7 +4,7 @@
 
 #block-reassurance {
   margin-top: 2rem;
-  
+
   &:first-child {
     margin-top: 0;
   }
@@ -41,35 +41,35 @@
       display: flex;
       flex-wrap: wrap;
 
-        li {
-          width: calc(100% / var(--mobytic_block_reassurance_li));
-          border: none;
+      li {
+        width: calc(100% / var(--mobytic_block_reassurance_li));
+        border: none;
 
-          @media screen and (max-width: $mobytic_responsive_tablet) {
-            width: 50%;
+        @media screen and (max-width: $mobytic_responsive_tablet) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: $mobytic_responsive_mobile) {
+          width: 100%;
+        }
+
+        div.block-reassurance-item {
+          display: flex;
+          align-items: center;
+
+          >img {
+            width: 40px;
+            height: auto;
           }
 
-          @media screen and (max-width: $mobytic_responsive_mobile) {
-            width: 100%;
-          }
+          >div {
 
-          div.block-reassurance-item {
-            display: flex;
-            align-items: center;
-
-            > img {
-              width: 40px;
-              height: auto;
-            }
-
-            > div {
-              
-              > span {
-                margin: 0;
-              }
+            >span {
+              margin: 0;
             }
           }
         }
+      }
     }
   }
 }
@@ -77,10 +77,64 @@
 
 
 // Product Page
+// #product {
+//   .blockreassurance_product {
+//     >div {
+//       display: flex;
+//     }
+//   }
+// }
+
+#cart,
 #product {
   .blockreassurance_product {
-    > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    >div {
+      width: 50%;
       display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      .item-product, svg, img {
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+      }
+
+      .block-title {
+        font-size: 14px;
+        font-weight: bold;
+        color: $mobytic_color_1;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+#cart {
+  .blockreassurance_product {
+    >div {
+      .item-product, svg, img {
+        height: 35px;
+        width: 35px;
+        margin-right: 10px;
+      }
+
+      .block-title {
+        font-size: 11px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 12px;
+      }
     }
   }
 }
