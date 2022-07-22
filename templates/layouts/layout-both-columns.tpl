@@ -59,6 +59,10 @@
       {hook h="displayWrapperTop"}
       {block name='container-fluid'}{/block}
 
+      <div class="container-fluid" id="mobytic_catalogue_header">
+        {block name='mobytic_catalogue_header'}{/block}
+      </div>
+
       <div class="container-fluid" id="mobytic_breadcrumb_product">
         <div class="container">
           <div class="row">
@@ -106,6 +110,10 @@
       </div>
       {hook h="displayWrapperBottom"}
     </section>
+
+    <div class="container-fluid" id="mobytic_catalogue_header_description">
+      {block name='mobytic_catalogue_header_description'}{/block}
+    </div>
 
     <footer id="footer" class="js-footer">
       {block name="footer"}

@@ -86,7 +86,7 @@
 
 
 
-  <div class="container" id="mobytic_homepage_cards">
+  {* <div class="container" id="mobytic_homepage_cards">
     <div class="row">
       <div class="col-sm-6 col-md-3 mobytic_card">
         <div>
@@ -215,7 +215,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> *}
 
 
   <div class="container" id="mobytic_welcome_home">

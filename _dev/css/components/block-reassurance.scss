@@ -68,6 +68,16 @@
               margin: 0;
             }
           }
+
+          .h6:first-child {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+
+          .h6:last-child {
+            font-size: 12px;
+          }
         }
       }
     }

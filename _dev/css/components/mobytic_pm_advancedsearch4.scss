@@ -1,0 +1,54 @@
+.PM_ASBlockOutput {
+
+    .PM_ASBlockTitle {
+        display: grid;
+    }
+
+    .card-header {
+        // border-bottom: inherit;
+        // padding: inherit;
+        background: $mobytic_color_2;
+
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+
+    .PM_ASCriterionsGroup {
+        &:first-child {
+            .PM_ASCriterionsGroupTitle {
+                padding-top: 0;
+            }
+        }
+
+        .PM_ASCriterionsGroupTitle {
+            border-bottom: inherit !important;
+
+        }
+    }
+
+
+    // PRICE SELECTOR
+    ul.color_to_pick_list {
+
+        >li,
+        >li>a {
+            border-radius: 50%;
+        }
+    }
+
+    .ui-slider-horizontal {
+        >a.ui-slider-handle {
+            border-radius: 50%;
+            transform: translateY(1px);
+        }
+
+        .ui-slider-range {
+            background: $mobytic_color_1;
+        }
+    }
+
+    // .PM_ASResetSearch {
+    //     display: none !important;
+    // }
+
+}

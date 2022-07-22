@@ -35,19 +35,22 @@
     justify-content: space-between;
 
     #category-description {
-      p,
-      strong {
+      p {
         font-weight: 400;
-        color: $gray;
+        color: $mobytic_color_1;
+      }
+
+      strong {
+        font-weight: bold;
+        color: $mobytic_color_1;
       }
 
       p {
-        margin-bottom: 0;
-        color: $gray-darker;
+        margin-bottom: 25px;
         word-break: break-word;
 
-        &:first-child {
-          margin-bottom: $medium-space;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
@@ -259,7 +262,6 @@
   .page-list {
     padding: 0.375rem;
     margin-bottom: 0;
-    background: $white;
 
     li {
       display: inline;
@@ -313,7 +315,6 @@
     display: inline-block;
     padding: 0.625rem;
     margin-right: $small-space;
-    margin-bottom: $small-space;
     font-size: $font-size-xs;
     color: $gray-darker;
     background: $white;
@@ -620,5 +621,54 @@
     .products {
       justify-content: center;
     }
+  }
+}
+
+
+#category {
+  background: $mobytic_color_5;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .breadcrumb {
+    margin: 0;
+  }
+
+  #left-column {
+    padding-left: 0;
+
+    @media (max-width: $mobytic_responsive_mobile) {
+      padding-left: 15px;
+    }
+  }
+
+  #content-wrapper {
+    padding-right: 0;
+
+    @media (max-width: $mobytic_responsive_mobile) {
+      padding-right: 15px;
+    }
+  }
+
+  #mobytic_catalogue_header,
+  #mobytic_catalogue_header_description {
+    background: $mobytic_color_2;
+
+    .card {
+      background-color: transparent;
+    }
+
+    .block-category {
+      margin: 0;
+      padding: 25px 0;
+      min-height: unset;
+    }
+  }
+
+  #mobytic_breadcrumb_product {
+    margin: 25px auto;
   }
 }

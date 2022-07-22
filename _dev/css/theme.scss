@@ -35,6 +35,8 @@
 @import "components/wrapper";
 @import "components/main";
 @import "components/notifications";
+
+@import "components/mobytic_pm_advancedsearch4";
 /* stylelint-enable */
 
 
@@ -47,6 +49,9 @@ body {
     background-color: $mobytic_color_2;
 }
 
+.price {
+    color: $mobytic_color_4;
+}
 
 #header {
     .header-top {
@@ -123,13 +128,13 @@ body {
 
                                 a {
                                     display: flex;
-    
-    
+
+
                                     i {
                                         font-size: 20px;
                                         width: 20px;
                                     }
-    
+
                                     >div {
                                         flex: 1;
                                         text-align: left;
@@ -167,6 +172,16 @@ body {
             #_mobile_cart {
                 .header {
                     display: flex;
+
+                    >a {
+                        position: relative;
+
+                        >div {
+                            position: absolute;
+                            top: -50%;
+                            right: -50%;
+                        }
+                    }
                 }
             }
 
@@ -251,85 +266,6 @@ body {
 }
 
 
-
-
-#mobytic_homepage_cards {
-    margin-top: 60px;
-
-    .row {
-        display: flex;
-        align-items: stretch;
-        flex-wrap: wrap;
-
-        .mobytic_card {
-            margin: 15px 0;
-
-            @media screen and (max-width: $mobytic_responsive_tablet) {
-                width: 50%;
-            }
-
-            >div {
-                height: 100%;
-                border-radius: 20px;
-                background: white;
-                padding: 5px;
-                box-shadow: 0px 0px 6px 0px black;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                .header {
-                    border-radius: 18px;
-                    height: 70px;
-                    background-color: gray;
-                }
-
-                .title {
-                    border-radius: 50px;
-                    margin: 5px;
-                    background-color: $mobytic_color_4;
-                    color: $mobytic_color_2;
-                    text-align: center;
-                }
-
-                .content {
-                    display: flex;
-                    --gap: 5px;
-                    gap: --gap;
-                    justify-content: center;
-
-                    >div {
-                        width: 100%;
-
-                        >ul {
-                            margin: 10px 0;
-                            padding: 0 5px;
-
-                            li {
-
-                                a {
-                                    color: $mobytic_color_1;
-                                    font-size: $mobytic_font_size_xs;
-                                }
-
-                                &:before {
-                                    content: ">";
-                                    margin-right: 5px;
-                                    font-size: $mobytic_font_size_xs;
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
 #mobytic_welcome_home {
     .title {
         margin-bottom: 0px !important;
@@ -356,6 +292,11 @@ body {
             height: 100px !important;
             width: auto;
         }
+    }
+
+    #block-reassurance {
+        margin-left: -30px;
+        margin-right: -30px;
     }
 }
 
