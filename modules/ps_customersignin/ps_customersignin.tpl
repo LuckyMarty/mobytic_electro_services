@@ -40,7 +40,7 @@
         {l s='My account' d='Shop.Theme.Customeraccount'}
         </div>
         </a></li>
-        <li><a href="{$urls.pages.my_account}" rel="nofollow">
+        <li><a href="{$urls.actions.logout}" rel="nofollow">
         <i class="material-icons"></i>
         <div>
         {l s='Sign out' d='Shop.Theme.Actions'}
