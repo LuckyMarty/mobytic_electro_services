@@ -1,0 +1,141 @@
+:root {
+    --contact_page_infos_divs: 3;
+}
+
+#contact {
+
+    #wrapper {
+
+        >.container {
+
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            #main {
+                #content {
+
+                    @media (max-width: $mobytic_responsive_mobile) {
+                        display: grid;
+                    }
+
+                    >section {
+                        background: $mobytic_color_5;
+                        margin-bottom: 50px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+
+                            @media (max-width: $mobytic_responsive_mobile) {
+                                order: -1;
+                                margin-bottom: 50px;
+                                margin-top: 0;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            @media (max-width: $mobytic_responsive_mobile) {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+
+
+                    .block-contact {
+                        padding: 1rem;
+
+                        p {
+                            font-size: 1.125rem;
+                            text-align: center;
+                        }
+
+                        #mobytic-contact-infos {
+                            display: grid;
+                            grid-template-columns: repeat(var(--contact_page_infos_divs), 1fr);
+
+                            @media (max-width: $mobytic_responsive_tablet) {
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+
+                            @media (max-width: $mobytic_responsive_mobile) {
+                                grid-template-columns: repeat(1, 1fr) !important;
+                            }
+
+                            >div {
+                                text-align: center;
+                                margin: 25px 0;
+                                padding: 0 25px;
+                                border-right: 1px solid $mobytic_color_1;
+
+                                @media (max-width: $mobytic_responsive_mobile) {
+                                    border-right: none;
+                                }
+
+                                &:last-child {
+                                    border-right: none;
+                                }
+
+                                &:nth-child(even) {
+                                    @media (max-width: $mobytic_responsive_tablet) {
+                                        border-right: none;
+                                    }
+                                }
+
+                                .icon i {
+                                    margin-bottom: 25px;
+                                    font-size: 40px;
+                                }
+                            }
+                        }
+                    }
+
+
+                    .contact-form {
+                        form {
+                            .form-fields {
+                                >.form-group {
+                                    &:first-child {
+                                        text-align: center;
+                                    }
+                                }
+
+                                >#mobytic_contact_page_form {
+                                    @media (min-width: $mobytic_responsive_mobile) {
+                                        display: flex;
+                                        align-content: stretch;
+                                    }
+
+                                    #mobytic_message {
+                                        height: 100%;
+
+                                        div {
+                                            height: 100%;
+
+                                            textarea {
+                                                min-height: 85%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 500px;
+        width: 100%;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        height: 500px;
+        width: 100%;
+    }
+}

@@ -41,5 +41,7 @@
 {/if}
 
 {block name='page_content'}
+  {widget name="ps_contactinfo" hook='displayLeftColumn'}
+
   {widget name="contactform"}
 {/block}

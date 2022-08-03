@@ -71,10 +71,10 @@ export default class TopMenu extends DropDown {
 
   toggleMobileMenu() {
     $('#header').toggleClass('is-open');
-    // if ($('#mobile_top_menu_wrapper').is(':visible')) {
-    //   $('#notifications, #wrapper, #footer').hide();
-    // } else {
-    //   $('#notifications, #wrapper, #footer').show();
-    // }
+    if ($('#mobile_top_menu_wrapper').is(':visible')) {
+      $('#notifications, #wrapper, #footer').hide();
+    } else {
+      $('#notifications, #wrapper, #footer').show();
+    }
   }
 }

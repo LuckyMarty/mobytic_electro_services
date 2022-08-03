@@ -109,7 +109,27 @@
         </div>
       </div>
       {hook h="displayWrapperBottom"}
+
     </section>
+
+
+    <div class="container-fluid" id="mobytic-product-under-details">
+      <div class="container">
+        <div class="row">
+          {block name='mobytic_product_under_details'}{/block}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid" id="mobytic-product-footer">
+      <div class="container">
+        <div class="row">
+          {block name='mobytic_product_footer'}{/block}
+        </div>
+      </div>
+    </div>
+
 
     <div class="container-fluid" id="mobytic_catalogue_header_description">
       {block name='mobytic_catalogue_header_description'}{/block}
@@ -119,6 +139,23 @@
       {block name="footer"}
         {include file="_partials/footer.tpl"}
       {/block}
+
+      <div class="container-fluid" id="mobytic-footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="text-sm-center">
+                {block name='copyright_link'}
+                    {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+                {/block}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
     </footer>
 
   </main>

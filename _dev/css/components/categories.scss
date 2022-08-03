@@ -625,7 +625,12 @@
 }
 
 
-#category {
+#category,
+#best-sales,
+#new-products,
+#module-pm_advancedsearch4-searchresults,
+#manufacturer
+ {
   background: $mobytic_color_5;
 
   h1 {
@@ -656,6 +661,7 @@
   #mobytic_catalogue_header,
   #mobytic_catalogue_header_description {
     background: $mobytic_color_2;
+    text-align: center;
 
     .card {
       background-color: transparent;

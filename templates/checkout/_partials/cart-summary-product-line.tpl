@@ -45,6 +45,10 @@
             <span class="value">{$value}</span>
           </div>
         {/foreach}
+        <div class="product-line-info reference">
+          <span class="label">Référence :</span>
+          <span class="value">{$product.reference}</span>
+        </div>
       </div>
       <div class="col-xs-2">
         <span class="product-quantity">{$product.quantity}</span>

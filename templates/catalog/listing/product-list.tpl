@@ -30,7 +30,9 @@
 
 {block name='mobytic_catalogue_header'}
   {block name='product_list_header'}
-    <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
+    <div class="block-category card card-block">
+        <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
+    </div>
   {/block}
 {/block}
 

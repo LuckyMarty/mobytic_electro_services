@@ -39,7 +39,7 @@
   }
 
   &.cart-summary-totals {
-    padding: 0 1.25rem 0.825rem;
+    padding: 1.25rem 0;
 
     .cart-summary-line {
       padding: 0.5rem 0.2rem 0;
@@ -49,7 +49,11 @@
       }
 
       &.cart-total {
-        padding: 1rem 0;
+        padding: 1rem 1.5rem;
+        
+        @media (max-width: $mobytic_responsive_mobile) {
+          padding: 1rem 0 !important;
+        }
 
         .label,
         .value {

@@ -80,7 +80,8 @@
 
         <div class="col-xs-12 hidden-md-up text-sm-center mobile">
           <div class="w-20" id="menu-icon">
-            <i class="material-icons d-inline">&#xE5D2;</i>
+            <span id="mobytic_mobile_menu_toggle_open"><i class="material-icons d-inline">&#xE5D2;</i></span>
+            <span id="mobytic_mobile_menu_toggle_close"><i class="material-icons d-inline">close</i></span>
           </div>
           <div class="top-logo" id="_mobile_logo"></div>
           <div id="_mobile_user_info"></div>

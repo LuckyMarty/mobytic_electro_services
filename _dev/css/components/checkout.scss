@@ -3,11 +3,38 @@ $carrier-selector: "carrier";
 body#checkout {
   color: $gray-darker;
 
+  .blockreassurance_product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    > div {
+      display: flex;
+
+      span.block-title {
+        font-weight: bold;
+        font-size: 11px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      span,
+      p {
+        color: $mobytic_color_1 !important;
+      }
+    }
+  }
+
   #header .header-nav {
     max-height: none;
     padding: 0.9375rem 0;
     margin-bottom: 0;
     border: none;
+
+    #_desktop_logo {
+      text-align: center;
+    }
 
     .logo {
       width: auto;
@@ -404,7 +431,7 @@ body#checkout {
 
             &:not(.#{$carrier-selector}-hasLogo) {
               >.col-xs-12 {
-                padding-left: calc(33.33333% + 15px);
+                padding-left: calc(33.33333% + 10px);
               }
             }
           }
@@ -588,9 +615,9 @@ body#checkout {
   }
 
   #footer {
-    padding: 0.9375rem;
     color: $gray;
     background: $white;
+    text-align: center;
   }
 
   #delivery {
@@ -766,7 +793,6 @@ body#checkout {
   body#checkout {
     #header .header-nav {
       max-height: none;
-      padding: 0;
     }
 
     section.checkout-step {

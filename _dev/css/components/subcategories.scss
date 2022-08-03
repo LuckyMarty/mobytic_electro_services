@@ -3,7 +3,9 @@
 
   .subcategory-heading {
     margin-bottom: 20px;
+    font-size: 1.5rem;
     font-weight: 500;
+    text-transform: uppercase;
   }
 
   ul {
@@ -58,8 +60,31 @@
 
 @include media-breakpoint-down(sm) {
   #subcategories {
+    &.card {
+      background-color: white;
+      padding: 1.563rem 1.25rem;
+    }
+
     ul {
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: auto;
+
+      > li {
+        width: 100%;
+        padding: 10px;
+        margin: auto;
+        min-width: unset;
+        text-align: center;
+        > div {
+          > a {
+            img {
+              width: auto !important;
+              height: 100%;
+            }
+          }
+        } 
+      }
     }
   }
 }

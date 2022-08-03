@@ -37,6 +37,7 @@
 @import "components/notifications";
 
 @import "components/mobytic_pm_advancedsearch4";
+@import "components/mobytic_page_contact";
 /* stylelint-enable */
 
 
@@ -54,6 +55,24 @@ body {
 }
 
 #header {
+    #mobytic_mobile_menu_toggle_open {
+        display: block;
+    }
+
+    #mobytic_mobile_menu_toggle_close {
+        display: none;
+    }
+
+    &.is-open {
+        #mobytic_mobile_menu_toggle_open {
+            display: none;
+        }
+
+        #mobytic_mobile_menu_toggle_close {
+            display: block;
+        }
+    }
+
     .header-top {
 
         // HEADER
@@ -187,6 +206,7 @@ body {
 
             #menu-icon {
                 width: 20%;
+                cursor: pointer;
             }
 
             #_mobile_logo {
@@ -391,6 +411,8 @@ body {
 
 
 
+#contact,
+
 #my-account,
 #authentication,
 #identity,
@@ -488,6 +510,18 @@ body {
             &:hover {
                 background: $mobytic_color_1;
             }
+        }
+    }
+}
+
+#order-detail {
+    .breadcrumb {
+        padding: 20px 0;
+    }
+
+    #main {
+        header.page-header {
+            text-align: center;
         }
     }
 }

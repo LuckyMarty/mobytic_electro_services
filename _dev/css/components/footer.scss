@@ -1,5 +1,14 @@
 #footer {
   padding-top: 2.5rem;
+
+  #mobytic-footer-copyright {
+    background-color: $mobytic_color_1;
+    p {
+      text-align: center;
+      margin: 0;
+      color: $mobytic_color_2;
+    }
+  }
 }
 
 .block-contact {

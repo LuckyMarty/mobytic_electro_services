@@ -1,6 +1,6 @@
-:root {
-  --mobytic_block_reassurance_li: 1;
-}
+// :root {
+//   --mobytic_block_reassurance_li: 1;
+// }
 
 #block-reassurance {
   margin-top: 2rem;
@@ -38,20 +38,30 @@
 #index {
   #block-reassurance {
     ul {
-      display: flex;
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media screen and (max-width: $mobytic_responsive_tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      // @media screen and (max-width: $mobytic_responsive_mobile) {
+      //   width: 100%;
+      // }
 
       li {
-        width: calc(100% / var(--mobytic_block_reassurance_li));
+        // width: calc(100% / var(--mobytic_block_reassurance_li));
         border: none;
 
-        @media screen and (max-width: $mobytic_responsive_tablet) {
-          width: 50%;
-        }
+        // @media screen and (max-width: $mobytic_responsive_tablet) {
+        //   width: 50%;
+        // }
 
-        @media screen and (max-width: $mobytic_responsive_mobile) {
-          width: 100%;
-        }
+        // @media screen and (max-width: $mobytic_responsive_mobile) {
+        //   width: 100%;
+        // }
 
         div.block-reassurance-item {
           display: flex;
@@ -81,6 +91,12 @@
         }
       }
     }
+
+    &:last-child {
+      .block-reassurance-item {
+        padding: 1rem 10px;
+      }
+    }
   }
 }
 
@@ -107,7 +123,9 @@
       align-items: flex-start;
       margin-bottom: 20px;
 
-      .item-product, svg, img {
+      .item-product,
+      svg,
+      img {
         height: 50px;
         width: 50px;
         margin-right: 20px;
@@ -131,7 +149,10 @@
 #cart {
   .blockreassurance_product {
     >div {
-      .item-product, svg, img {
+
+      .item-product,
+      svg,
+      img {
         height: 35px;
         width: 35px;
         margin-right: 10px;

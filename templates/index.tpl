@@ -28,16 +28,16 @@
     {widget name='ps_imageslider'}
   </div>
 
-  <div class="container"">
+  <div class="container">
     <div class=" row">
-  {widget name='blockreassurance'}
-</div>
-</div>
+      {widget name='blockreassurance'}
+    </div>
+  </div>
 
-<div class="mobytic_home_behind_hook_bg">
-  <div class="container" id="mobytic_5_blocks_home">
-    <div class="row">
-      {* <div class="col-md-3">
+  <div class="mobytic_home_behind_hook_bg">
+    <div class="container" id="mobytic_5_blocks_home">
+      <div class="row">
+        {* <div class="col-md-3">
         <div>
           <a href=#>
             <div class="title">Nos marques</div>
@@ -49,14 +49,14 @@
           </a>
         </div>
       </div> *}
-      {* <div class="col-md-6">
+        {* <div class="col-md-6">
         <div>
           <a href=#>
             <div class="mobytic_button">Découvrir</div>
           </a>
         </div>
       </div> *}
-      {* <div class="col-md-3">
+        {* <div class="col-md-3">
         <div>
           <a href=#>
             <div class="title">Lorem Ipsum</div>
@@ -69,164 +69,30 @@
         </div>
 
       </div> *}
+      </div>
+      {$HOOK_HOME nofilter}
     </div>
-    {$HOOK_HOME nofilter}
+
+
   </div>
-
-
-</div>
 {/block}
 
 {block name='page_content_container'}
-<section id="content" class="page-home">
-  {block name='page_content_top'}{/block}
+  <section id="content" class="page-home">
+    {block name='page_content_top'}{/block}
 
-  {block name='page_content'}
-  {block name='hook_home'}
+    {block name='page_content'}
+      {block name='hook_home'}
 
-
-
-  {* <div class="container" id="mobytic_homepage_cards">
-    <div class="row">
-      <div class="col-sm-6 col-md-3 mobytic_card">
-        <div>
-          <div class="header"></div>
-          <a href="#">
-            <div class="title">Appareillage XX</div>
-          </a>
-          <div class="content">
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-
-            </div>
+        <div class="container" id="mobytic_welcome_home">
+          <div class="row">
+            {hook h='displayMobyticHomeUnder'}
           </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-md-3 mobytic_card">
-        <div>
-          <div class="header"></div>
-          <a href="#">
-            <div class="title">Appareillage XX</div>
-          </a>
-          <div class="content">
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 mobytic_card">
-        <div>
-          <div class="header"></div>
-          <a href="#">
-            <div class="title">Appareillage XX</div>
-          </a>
-          <div class="content">
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 mobytic_card">
-        <div>
-          <div class="header"></div>
-          <a href="#">
-            <div class="title">Appareillage XX</div>
-          </a>
-          <div class="content">
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-                <li><a href="">Lorem Ipsum</a>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> *}
-
-
-  <div class="container" id="mobytic_welcome_home">
-    <div class="row">
-    {hook h='displayMobyticHomeUnder'}
-    </div>
-  </div>
 
 
 
-  {/block}
-  {/block}
-</section>
+      {/block}
+    {/block}
+  </section>
 {/block}

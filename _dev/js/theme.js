@@ -87,10 +87,19 @@ $(document).ready(() => {
 
 
 // Mobytic - Block Reassurance
+// $(document).ready(() => {
+//   console.log('OK');
+//   if(document.querySelectorAll('#block-reassurance')) {
+//     const mobytic_block_reassurance_li = document.querySelectorAll('#block-reassurance:nth-child(1) .block-reassurance-item').length;
+//     document.documentElement.style.setProperty("--mobytic_block_reassurance_li", mobytic_block_reassurance_li);
+//   }
+// });
+
+// Mobytic - Block Reassurance
 $(document).ready(() => {
   console.log('OK');
-  if(document.querySelectorAll('#block-reassurance')) {
-    const mobytic_block_reassurance_li = document.querySelectorAll('#block-reassurance:nth-child(1) .block-reassurance-item').length;
-    document.documentElement.style.setProperty("--mobytic_block_reassurance_li", mobytic_block_reassurance_li);
+  if(document.querySelectorAll('#contact #mobytic-contact-infos')) {
+    const contact_page_infos_divs = document.querySelectorAll('#contact #mobytic-contact-infos')[0].children.length;
+    document.documentElement.style.setProperty("--contact_page_infos_divs", contact_page_infos_divs);
   }
 });

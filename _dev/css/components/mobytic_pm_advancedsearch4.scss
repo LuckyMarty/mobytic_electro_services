@@ -50,5 +50,12 @@
     // .PM_ASResetSearch {
     //     display: none !important;
     // }
+    @include media-breakpoint-down(sm) {
 
+        .card-block {
+            background-color: white;
+            padding: 1.563rem 1.25rem;
+        }
+
+    }
 }

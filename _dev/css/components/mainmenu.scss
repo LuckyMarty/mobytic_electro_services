@@ -101,6 +101,9 @@
 #mobile_top_menu_wrapper {
   padding: 15px;
   background: $white;
+  position: absolute;
+  left: 0;
+  right: 0;
 
   #top-menu {
     margin-bottom: 0.625rem;

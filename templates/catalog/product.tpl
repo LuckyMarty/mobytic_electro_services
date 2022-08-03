@@ -74,7 +74,17 @@
         <div class="mobytic-right-top">
           {block name='page_header_container'}
             {block name='page_header'}
-              <h1 class="h1">{block name='page_title'}{$product.name}{/block}</h1>
+              <h1 class="h1">{block name='page_title'}{$product.name}
+
+                  {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
+                    -
+                    <span id="product-short-details-reference">
+                      {include file='catalog/_partials/product-details.tpl'}
+                    </span>
+                  {/if}
+
+                {/block}
+              </h1>
             {/block}
           {/block}
           {block name='product_prices'}
@@ -125,13 +135,6 @@
                   {block name='product_add_to_cart'}
                     {include file='catalog/_partials/product-add-to-cart.tpl'}
                   {/block}
-
-                  {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
-                    <div class="product-reference">
-                      <label class="label">{l s='Reference' d='Shop.Theme.Catalog'} : </label>
-                      <span>{$product.reference_to_display}</span>
-                    </div>
-                  {/if}
 
                   {block name='product_additional_info'}
                     {include file='catalog/_partials/product-additional-info.tpl'}
@@ -230,24 +233,7 @@
       </div>
     {/block}
 
-    {block name='product_accessories'}
-      {if $accessories}
-        <section class="product-accessories clearfix">
-          <p class="h5 text-uppercase">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
-          <div class="products row">
-            {foreach from=$accessories item="product_accessory" key="position"}
-              {block name='product_miniature'}
-                {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory position=$position productClasses="col-xs-6 col-lg-4 col-xl-3"}
-              {/block}
-            {/foreach}
-          </div>
-        </section>
-      {/if}
-    {/block}
 
-    {block name='product_footer'}
-      {hook h='displayFooterProduct' product=$product category=$category}
-    {/block}
 
     {block name='product_images_modal'}
       {include file='catalog/_partials/product-images-modal.tpl'}
@@ -262,4 +248,54 @@
     {/block}
   </section>
 
+  <script>
+    // Pure JS document ready ...
+    document.addEventListener('DOMContentLoaded', () => {
+      //the event occurred
+      reload_ref();
+
+      setInterval(function() {
+        //this code runs every second 
+        if (document.querySelectorAll('#product-details').length == 2) {
+          reload_ref();
+
+          if (document.querySelector('a[aria-controls=product-details]').classList.contains("active")) {
+            document.querySelector('a[aria-controls=description]').click();
+            document.querySelector('a[aria-controls=product-details]').click();
+          }
+        }
+      }, 1000);
+
+
+    });
+
+    function reload_ref() {
+      document.querySelectorAll('#product-details')[0].id = ' ';
+    }
+  </script>
+{/block}
+
+
+{block name='mobytic_product_under_details'}
+  {block name='product_accessories'}
+    {if $accessories}
+      <section class="product-accessories clearfix">
+        <p class="h5 text-uppercase">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
+        <div class="products row">
+          {foreach from=$accessories item="product_accessory" key="position"}
+            {block name='product_miniature'}
+              {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory position=$position productClasses="col-xs-6 col-lg-4 col-xl-3"}
+            {/block}
+          {/foreach}
+        </div>
+      </section>
+    {/if}
+  {/block}
+{/block}
+
+
+{block name='mobytic_product_footer'}
+  {block name='product_footer'}
+    {hook h='displayFooterProduct' product=$product category=$category}
+  {/block}
 {/block}
