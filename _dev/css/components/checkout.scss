@@ -6,6 +6,7 @@ body#checkout {
   .blockreassurance_product {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px 20px 20px;
 
     > div {
       display: flex;
@@ -26,27 +27,27 @@ body#checkout {
     }
   }
 
-  #header .header-nav {
-    max-height: none;
-    padding: 0.9375rem 0;
-    margin-bottom: 0;
-    border: none;
+  // #header .header-nav {
+  //   max-height: none;
+  //   padding: 0.9375rem 0;
+  //   margin-bottom: 0;
+  //   border: none;
 
-    #_desktop_logo {
-      text-align: center;
-    }
+  //   #_desktop_logo {
+  //     text-align: center;
+  //   }
 
-    .logo {
-      width: auto;
-      max-height: 4.375rem;
-    }
+  //   .logo {
+  //     width: auto;
+  //     max-height: 4.375rem;
+  //   }
 
-    #_desktop_contact_link {
-      #contact-link {
-        margin-top: 0;
-      }
-    }
-  }
+  //   #_desktop_contact_link {
+  //     #contact-link {
+  //       margin-top: 0;
+  //     }
+  //   }
+  // }
 
   .cart-grid-right {
     .card {
@@ -614,11 +615,11 @@ body#checkout {
     }
   }
 
-  #footer {
-    color: $gray;
-    background: $white;
-    text-align: center;
-  }
+  // #footer {
+  //   color: $gray;
+  //   background: $white;
+  //   text-align: center;
+  // }
 
   #delivery {
     >label {
@@ -791,9 +792,9 @@ body#checkout {
   }
 
   body#checkout {
-    #header .header-nav {
-      max-height: none;
-    }
+    // #header .header-nav {
+    //   max-height: none;
+    // }
 
     section.checkout-step {
       .content {

@@ -120,8 +120,11 @@
     >div {
       width: 50%;
       display: flex;
-      align-items: flex-start;
+      align-items: flex-start; 
       margin-bottom: 20px;
+      @media (max-width: $mobytic_responsive_mobile) {
+        width: 100% !important;
+    }
 
       .item-product,
       svg,

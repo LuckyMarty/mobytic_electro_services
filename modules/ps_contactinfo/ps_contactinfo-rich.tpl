@@ -147,15 +147,4 @@
 </section>
 
 
-<section>
-  <div class="mapouter">
-    <div class="gmap_canvas"><iframe height="500" id="gmap_canvas" style="width: 100%;"
-        src="https://maps.google.com/maps?q={$contact_infos.address.address1},%20{$contact_infos.address.city}%20{$contact_infos.address.postcode}%20{$contact_infos.address.country}&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-        href="https://123movies-to.org"></a><br><a href="https://www.embedgooglemap.net">google map embed iframe</a>
-    </div>
-  </div>
-</section>
-
-
 {* {$contact_infos|var_dump} *}

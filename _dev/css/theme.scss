@@ -390,6 +390,9 @@ body {
                 &-top {
                     background-color: $mobytic_color_5;
                     padding: 40px;
+                    @media (max-width: $mobytic_responsive_mobile) {
+                        padding: 10px;
+                    }
                 }
 
                 &-bottom {
@@ -524,4 +527,11 @@ body {
             text-align: center;
         }
     }
+}
+
+
+.mobytic_required_star {
+    text-align: end;
+    width: 100%;
+    height: 0;
 }

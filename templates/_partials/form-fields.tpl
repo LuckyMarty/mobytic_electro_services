@@ -34,6 +34,7 @@
     <label class="col-md-6 form-control-label{if $field.required} required{/if}" for="field-{$field.name}">
       {if $field.type !== 'checkbox'}
         {$field.label}
+        {if $field.required}*{/if}
       {/if}
     </label>
 
@@ -98,6 +99,7 @@
       {elseif $field.type === 'checkbox'}
 
         {block name='form_field_item_checkbox'}
+        {if $field.required}<div class="mobytic_required_star">*</div>{/if}
           <span class="custom-checkbox">
             <label>
               <input name="{$field.name}" type="checkbox" value="1" {if $field.value}checked="checked"{/if} {if $field.required}required{/if}>

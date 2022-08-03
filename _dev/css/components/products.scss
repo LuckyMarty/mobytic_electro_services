@@ -118,9 +118,12 @@
     height: 2.75rem;
     padding-top: 0.625rem;
     line-height: inherit;
+    border-radius: 10px;
+    font-size: .7rem;  
 
     .material-icons {
       line-height: inherit;
+      color: $mobytic_color_2 !important;
     }
   }
 
@@ -131,16 +134,27 @@
 
 .product-quantity {
   display: flex;
+  @media (max-width: $mobytic_responsive_mobile) {
+    flex-wrap: wrap;
+  }
 
   .qty,
   .add {
     display: inline-flex;
     float: left;
     margin-bottom: 0.5rem;
+
+    @media (max-width: $mobytic_responsive_mobile) {
+      width: 100%;
+      display: grid;
+    }
   }
 
   .qty {
     margin-right: 0.4rem;
+    @media (max-width: $mobytic_responsive_mobile) {
+      margin: 0 0 20px 0;
+    }
   }
 
   #quantity_wanted {
@@ -149,10 +163,16 @@
     padding: 0.175rem 0.5rem;
     color: $gray-darker;
     background-color: $white;
+    @media (max-width: $mobytic_responsive_mobile) {
+      width: calc(100% - 25px);
+    }
   }
 
   .input-group-btn-vertical {
     width: auto;
+    @media (max-width: $mobytic_responsive_mobile) {
+      width: 25px;
+    }
 
     .btn {
       padding: 0.5rem 0.6875rem;
@@ -483,7 +503,7 @@
 
   .product-name {
     font-size: 1.125rem;
-    color: $brand-primary;
+    color: $mobytic_color_1;
 
     @include media-breakpoint-down(sm) {
       padding: 0 0.5rem;
@@ -722,9 +742,10 @@
 
   li.product-flag {
     width: fit-content;
-    padding: 0.3125rem 0.4375rem;
+    padding: 0.3rem;
     margin-top: $small-space;
-    font-size: $base-font-size;
+    margin-left: $small-space;
+    font-size: 0.7rem;
     font-weight: 700;
     color: $white;
     text-transform: uppercase;

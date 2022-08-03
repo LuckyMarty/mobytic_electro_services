@@ -625,11 +625,25 @@
 }
 
 
-#category,
-#best-sales,
-#new-products,
-#module-pm_advancedsearch4-searchresults,
-#manufacturer
+#cms,
+#contact,
+#product {
+  background: $mobytic_color_2 !important;
+}
+
+#product {
+  #mobytic_breadcrumb_product {
+    margin: 0 !important;
+  }
+}
+
+// #category,
+// #best-sales,
+// #new-products,
+// #module-pm_advancedsearch4-searchresults,
+// #manufacturer
+// .mobytic-full-width-page,
+body:not(#checkout):not(#product):not(#cart).mobytic-full-width-page
  {
   background: $mobytic_color_5;
 
