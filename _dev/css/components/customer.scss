@@ -71,32 +71,87 @@
   }
 
   #main {
-    background-color: #ddd;
-    width: 40%;
-    margin: 50px auto;
-    display: flow-root;
+    #content {
+      margin: 50px auto;
+      background-color: transparent;
+      
+      section {
+        margin-bottom: 25px;
+        padding: 25px;
+        background-color: $mobytic_color_2;
 
-    @media (max-width: $mobytic_responsive_tablet) {
-      width: 100%;
-    }
+        h1,
+        .form-footer,
+        .forgot-password {
+          text-align: left !important;
+        }
 
-    .page-header {
-      margin: 25px auto;
+        .forgot-password {
+          a {
+            color: $mobytic_color_1;
+            text-decoration: underline;
+          }
+        }
 
-      h1 {
-        text-align: center;
+        .mobytic_auth_btn {
+          border-radius: 50px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        > form#login-form {
+          #field-email {
+            border-radius: 50px;
+          }
+          #field-password {
+            border-radius: 50px 0 0 50px;
+          }
+          
+          #field-password + span > button {
+            border-radius: 0 50px 50px 0;
+          }
+        }
+
+        &.no-account {
+          text-align: left;
+
+          a {
+            margin-top: 25px;
+          }
+        }
       }
     }
-
-    #content {
-      background-color: transparent;
-    }
-
-    .page-content,
-    .page-footer {
-      margin-bottom: 0;
-    }
   }
+
+  // #main {
+  //   background-color: #ddd;
+  //   width: 40%;
+  //   margin: 50px auto;
+  //   display: flow-root;
+
+  //   @media (max-width: $mobytic_responsive_tablet) {
+  //     width: 100%;
+  //   }
+
+  //   .page-header {
+  //     margin: 25px auto;
+
+  //     h1 {
+  //       text-align: center;
+  //     }
+  //   }
+
+  //   #content {
+  //     background-color: transparent;
+  //   }
+
+  //   .page-content,
+  //   .page-footer {
+  //     margin-bottom: 0;
+  //   }
+  // }
 }
 
 #identity,
