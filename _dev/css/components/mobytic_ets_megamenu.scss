@@ -1,0 +1,30 @@
+.ets_mm_megamenu {
+    >.ets_mm_megamenu_content {
+        background: $mobytic_color_1  !important;
+        border: none !important;
+
+        .mm_menus_ul {
+            .mm_menus_li {
+                border: none !important;
+            }
+        }
+    }
+}
+
+#mobytic_megamenu_slot {
+    .mm_menus_ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#mobytic_mobile_icon_slot {
+    width: 20% !important;
+    .ets_mm_megamenu {
+        background-color: white !important;
+        
+        .container {
+            background-color: white !important;
+        }
+    }
+}

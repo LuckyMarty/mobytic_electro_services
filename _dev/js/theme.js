@@ -49,6 +49,10 @@ import './lib/bootstrap-filestyle.min';
 import './lib/jquery.scrollbox.min';
 
 import './components/block-cart';
+
+import './mobytic_ets_megamenu';
+
+
 import $ from 'jquery';
 /* eslint-enable */
 

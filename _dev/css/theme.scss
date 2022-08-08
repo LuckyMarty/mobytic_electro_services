@@ -38,16 +38,17 @@
 
 @import "components/mobytic_pm_advancedsearch4";
 @import "components/mobytic_page_contact";
+@import "components/mobytic_ets_megamenu";
 /* stylelint-enable */
 
 
 * {
     font-family: $mobytic_font_2;
-    color: $mobytic_color_1;
+    // color: $mobytic_color_1;
 }
 
 body {
-    background-color: $mobytic_color_2;
+    background-color: $mobytic_color_1;
 }
 
 .price {
@@ -178,6 +179,7 @@ body {
                     i,
                     div {
                         width: 100%;
+                        color: $mobytic_color_1;
                     }
                 }
             }
