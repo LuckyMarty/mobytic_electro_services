@@ -1,0 +1,35 @@
+// List de Produits
+// Bouton
+.mobytic_add_to_cart_productlist {
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+
+    i {
+        font-size: 16px;
+    }
+}
+
+
+// .product-thumbnail,
+// .product-cover {
+//     position: relative;
+
+//     &::after {
+//         content: '© Electro Services';
+//         // content: url(https://electro-services.fr/img/esf-logo-1657190066.jpg);
+//         position: absolute;
+//         height: 100%;
+//         width: 100%;
+//         top: 0;
+//         left: 0;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         color: black;
+//         font-size: 30px;
+//         font-weight: 500;
+//         opacity: 0.05;
+//         // transform: rotate(-45deg);
+//     }
+// }

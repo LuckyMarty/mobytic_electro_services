@@ -43,7 +43,7 @@
         </div>
         <div class="col-md-6 col-sm-6">
           <h1 class="h1">{$product.name}</h1>
-          {block name='product_prices'}
+          {block name='product_prices'} 
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}
           {block name='product_description_short'}

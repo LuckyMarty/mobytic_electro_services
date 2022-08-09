@@ -103,6 +103,27 @@
               {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
               {hook h='displayProductPriceBlock' product=$product type='weight'}
+
+              <form action="{$urls.pages.cart}" method="post">
+                <input type="hidden" name="token" value="{$static_token}">
+                <input type="hidden" value="{$product.id_product}" name="id_product">
+                {* <input type="number" class="input-group form-control" name="qty" value="1"> *}
+
+                  <button
+                  class="btn btn-primary mobytic_add_to_cart_productlist"
+                  data-button-action="add-to-cart"
+                  type="submit"
+                  {if !$product.add_to_cart_url}
+                    disabled
+                  {/if}
+                >
+                  <i class="material-icons shopping-cart">&#xE547;</i>
+                  {l s='Add to cart' d='Shop.Theme.Actions'}
+                </button>
+              </form>
+
+
+
             </div>
           {/if}
         {/block}
