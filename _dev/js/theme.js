@@ -50,6 +50,7 @@ import './lib/jquery.scrollbox.min';
 
 import './components/block-cart';
 
+import './mobytic_corrections';
 import './mobytic_ets_megamenu';
 
 
