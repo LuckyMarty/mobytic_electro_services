@@ -54,8 +54,8 @@ import './mobytic_corrections';
 import './mobytic_ets_megamenu';
 
 // WATERMARK
-import './mobytic-lib/jquery.watermark';
-// import './mobytic-lib/jquery.watermark.min';
+// import './mobytic-lib/jquery.watermark';
+import './mobytic-lib/jquery.watermark.min';
 import './mobytic_watermark';
 
 import $ from 'jquery';
@@ -106,7 +106,7 @@ $(document).ready(() => {
 
 // Mobytic - Block Reassurance
 $(document).ready(() => {
-  if(document.querySelectorAll('#contact #mobytic-contact-infos')) {
+  if(document.querySelector('#contact')) {
     const contact_page_infos_divs = document.querySelectorAll('#contact #mobytic-contact-infos')[0].children.length;
     document.documentElement.style.setProperty("--contact_page_infos_divs", contact_page_infos_divs);
   }

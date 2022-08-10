@@ -4,7 +4,7 @@ $(document).ready(() => {
   /**
    * Product List _________________________________________
    */
-  mobytic_add_watermark(watermark_text, '.product-thumbnail > img', '250', '18');
+  mobytic_add_watermark(watermark_text, '.product-thumbnail > img', '250', '18', 0);
   
   /**
    * Modal Quick View : Update cover image
@@ -13,11 +13,11 @@ $(document).ready(() => {
     
     setTimeout(() => {
       mobytic_add_watermark(watermark_text, '.product-cover > img', 800, 50);
-      update_url_with_matermark(watermark_text, 'img.js-thumb', 800, 50, 12, 400, 25, 12, 100, 10, 12);
+      update_url_with_matermark(watermark_text, 'img.js-thumb', 800, 50, 0, 400, 25, 0, 100, 10, 0);
     }, 1000);
     setTimeout(() => {
       mobytic_add_watermark(watermark_text, '.product-cover > img', 800, 50);
-      update_url_with_matermark(watermark_text, 'img.js-thumb', 800, 50, 12, 400, 25, 12, 100, 10, 12);
+      update_url_with_matermark(watermark_text, 'img.js-thumb', 800, 50, 0, 400, 25, 0, 100, 10, 0);
     }, 1500);
 
   });
@@ -32,7 +32,7 @@ $(document).ready(() => {
    * Update Images URL in below list
    */
   if (document.querySelector('#product')) {
-    update_url_with_matermark(watermark_text, 'img.js-thumb', 425, 50, 0, 400, 25, 12, 100, 10, 12);
+    update_url_with_matermark(watermark_text, 'img.js-thumb', 425, 50, 0, 400, 25, 0, 100, 10, 0);
   }
 
   /**
@@ -40,8 +40,14 @@ $(document).ready(() => {
    */
   $("#product .product-cover > div.layer").click(function () {
     document.querySelector('#product .modal-body > figure > img').src =  document.querySelector('#product .product-cover > img').src;
-    update_url_with_matermark(watermark_text, 'img.js-modal-thumb', 800, 50, 12, 400, 25, 12, 100, 10, 12);
+    update_url_with_matermark(watermark_text, 'img.js-modal-thumb', 800, 50, 0, 400, 25, 0, 100, 10, 0);
   });
+
+  /**
+   * Checkout Procedures
+   */
+  mobytic_add_watermark(watermark_text, '#cart span.product-image > img, #checkout .media-object', 125, 12, 0);
+  mobytic_add_watermark(watermark_text, '#order-confirmation .order-confirmation-table .image > img', 250, 25, 0);
 });
 
 
@@ -52,8 +58,9 @@ $(document).ready(() => {
  * @param {string} selector 
  * @param {number} text_Width 
  * @param {number} text_Size 
+ * @param {number} add_margin 
  */
-function mobytic_add_watermark(watermark_text, selector, text_Width, text_Size) {
+function mobytic_add_watermark(watermark_text, selector, text_Width, text_Size, add_margin) {
   $(selector).watermark({
     text: watermark_text,
     textWidth: text_Width,
@@ -62,7 +69,7 @@ function mobytic_add_watermark(watermark_text, selector, text_Width, text_Size) 
     textBg: 'rgba(0, 0, 0, 0)',
     gravity: 'w',
     opacity: 0.05,
-    margin: 12,
+    margin: add_margin,
   });
 }
 
@@ -71,15 +78,15 @@ function mobytic_add_watermark(watermark_text, selector, text_Width, text_Size) 
  * @param {string} selector 
  * @param {number} l_text_width 
  * @param {number} l_font_size 
- * @param {number} l_padding 
+ * @param {number} l_margin 
  * @param {number} m_text_width 
  * @param {number} m_font_size 
- * @param {number} m_padding 
+ * @param {number} m_margin 
  * @param {number} t_text_width 
  * @param {number} t_font_size 
- * @param {number} t_padding 
+ * @param {number} t_margin 
  */
- function update_url_with_matermark(watermark_text, selector, l_text_width, l_font_size, l_padding, m_text_width, m_font_size, m_padding, t_text_width, t_font_size, t_padding) {
+ function update_url_with_matermark(watermark_text, selector, l_text_width, l_font_size, l_margin, m_text_width, m_font_size, m_margin, t_text_width, t_font_size, t_margin) {
   let all_img = document.querySelectorAll(selector);
   let all_img_link_t = [];
   let all_img_link_l = [];
@@ -91,9 +98,9 @@ function mobytic_add_watermark(watermark_text, selector, text_Width, text_Size) 
     all_img_link_m.push(img.dataset.imageMediumSrc);
   });
 
-  get_watermark_links(watermark_text, all_img_link_l, l_text_width, l_font_size, l_padding, all_img, 'l');
-  get_watermark_links(watermark_text, all_img_link_m, m_text_width, m_font_size, m_padding, all_img, 'm');
-  get_watermark_links(watermark_text, all_img_link_t, t_text_width, t_font_size, t_padding, all_img, 't');
+  get_watermark_links(watermark_text, all_img_link_l, l_text_width, l_font_size, l_margin, all_img, 'l');
+  get_watermark_links(watermark_text, all_img_link_m, m_text_width, m_font_size, m_margin, all_img, 'm');
+  get_watermark_links(watermark_text, all_img_link_t, t_text_width, t_font_size, t_margin, all_img, 't');
 }
 
 /**
@@ -103,7 +110,7 @@ function mobytic_add_watermark(watermark_text, selector, text_Width, text_Size) 
  * @param {number} text_Width 
  * @param {number} text_Size 
  */
-function get_watermark_links(watermark_text, tab_links, text_Width, text_Size, add_padding, all_images_list, src) {
+function get_watermark_links(watermark_text, tab_links, text_Width, text_Size, add_margin, all_images_list, src) {
   var inputImages = tab_links;
 
   var outputImages = [];
@@ -120,7 +127,7 @@ function get_watermark_links(watermark_text, tab_links, text_Width, text_Size, a
       textBg: 'rgba(0, 0, 0, 0)',
       gravity: 'w',
       opacity: 0.05,
-      margin: add_padding,
+      margin: add_margin,
       done: function (imgURL) {
         outputImages[i] = imgURL;
         if (i + 1 === inputImages.length) {
