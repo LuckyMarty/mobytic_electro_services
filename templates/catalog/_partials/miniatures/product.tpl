@@ -118,7 +118,7 @@
                   {/if}
                 >
                   <i class="material-icons shopping-cart">&#xE547;</i>
-                  {l s='Add to cart' d='Shop.Theme.Actions'}
+                  {l s='Add' d='Shop.Theme.Actions'}
                 </button>
               </form>
 

@@ -72,6 +72,10 @@ $product-description-height: 70px;
     overflow: hidden;
     background: $white;
 
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+
     &:hover,
     &:focus {
       .highlighted-informations {

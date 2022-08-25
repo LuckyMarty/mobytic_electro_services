@@ -1,11 +1,3 @@
-/*  @preserve
- *  Project: jQuery plugin Watermark
- *  Description: Add watermark on images use HTML5 and Javascript.
- *  Author: Zzbaivong (devs.forumvi.com)
- *  Version: 1.0.2
- *  License: MIT
- */
-
 /*!
  * @fileOverview TouchSwipe - jQuery Plugin
  * @version 1.6.18
@@ -26,7 +18,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-/*! VelocityJS.org (1.5.2). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
+/*! VelocityJS.org (1.5.0). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
 
 /*! VelocityJS.org jQuery Shim (1.0.1). (C) 2014 The jQuery Foundation. MIT @license: en.wikipedia.org/wiki/MIT_License. */
 

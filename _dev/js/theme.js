@@ -55,8 +55,8 @@ import './mobytic_ets_megamenu';
 
 // WATERMARK
 // import './mobytic-lib/jquery.watermark';
-import './mobytic-lib/jquery.watermark.min';
-import './mobytic_watermark';
+// import './mobytic-lib/jquery.watermark.min';
+// import './mobytic_watermark';
 
 import $ from 'jquery';
 /* eslint-enable */
