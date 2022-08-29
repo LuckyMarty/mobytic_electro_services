@@ -47,7 +47,6 @@
 {/block}
 
 {block name='content'}
-
   <section id="main">
     <meta content="{$product.url}">
 
@@ -143,6 +142,8 @@
                   {* Input to refresh product HTML removed, block kept for compatibility with themes *}
                   {block name='product_refresh'}{/block}
                 </form>
+
+                <div>{$product.quantity} {l s='en stock' d='Shop.Theme.listing'}</div>
               {/block}
 
             </div>

@@ -23,118 +23,146 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 {block name='product_miniature_item'}
-<div class="js-product product{if !empty($productClasses)} {$productClasses}{/if}">
-  <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
-    <div class="thumbnail-container">
-      <div class="thumbnail-top">
-        {block name='product_thumbnail'}
-          {if $product.cover}
-            <a href="{$product.url}" class="thumbnail product-thumbnail">
-              <img
-                src="{$product.cover.bySize.home_default.url}"
-                alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name}{/if}"
-                loading="lazy"
-                data-full-size-image-url="{$product.cover.large.url}"
-                width="{$product.cover.bySize.home_default.width}"
-                height="{$product.cover.bySize.home_default.height}"
-              />
-            </a>
-          {else}
-            <a href="{$product.url}" class="thumbnail product-thumbnail">
-              <img
-                src="{$urls.no_picture_image.bySize.home_default.url}"
-                loading="lazy"
-                width="{$urls.no_picture_image.bySize.home_default.width}"
-                height="{$urls.no_picture_image.bySize.home_default.height}"
-              />
-            </a>
-          {/if}
-        {/block}
-
-        <div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
-          {block name='quick_view'}
-            <a class="quick-view js-quick-view" href="#" data-link-action="quickview">
-              <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
-            </a>
-          {/block}
-
-          {block name='product_variants'}
-            {if $product.main_variants}
-              {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
+  <div
+    class="mobytic_product-grid-list-wrapper-info-box js-product product{if !empty($productClasses)} {$productClasses}{/if} mobytic_product-wrapper">
+    <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}"
+      data-id-product-attribute="{$product.id_product_attribute}">
+      <div class="thumbnail-container">
+        <div class="thumbnail-top">
+          {block name='product_thumbnail'}
+            {if $product.cover}
+              <a href="{$product.url}" class="thumbnail product-thumbnail">
+                <img src="{$product.cover.bySize.home_default.url}"
+                  alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name}{/if}" loading="lazy"
+                  data-full-size-image-url="{$product.cover.large.url}" width="{$product.cover.bySize.home_default.width}"
+                  height="{$product.cover.bySize.home_default.height}" />
+              </a>
+            {else}
+              <a href="{$product.url}" class="thumbnail product-thumbnail">
+                <img src="{$urls.no_picture_image.bySize.home_default.url}" loading="lazy"
+                  width="{$urls.no_picture_image.bySize.home_default.width}"
+                  height="{$urls.no_picture_image.bySize.home_default.height}" />
+              </a>
             {/if}
           {/block}
+
+          <div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
+            {block name='quick_view'}
+              <a class="quick-view js-quick-view" href="#" data-link-action="quickview">
+                <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
+              </a>
+            {/block}
+
+            {block name='product_variants'}
+              {if $product.main_variants}
+                {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
+              {/if}
+            {/block}
+          </div>
         </div>
-      </div>
 
-      <div class="product-description">
-        {block name='product_name'}
-          {if $page.page_name == 'index'}
-            <h3 class="h3 product-title"><a href="{$product.url}" content="{$product.url}">{$product.name}</a></h3>
-          {else}
-            <h2 class="h3 product-title"><a href="{$product.url}" content="{$product.url}">{$product.name}</a></h2>
-          {/if}
-        {/block}
-
-        {block name='product_price_and_shipping'}
-          {if $product.show_price}
-            <div class="product-price-and-shipping">
-              {if $product.has_discount}
-                {hook h='displayProductPriceBlock' product=$product type="old_price"}
-
-                <span class="regular-price" aria-label="{l s='Regular price' d='Shop.Theme.Catalog'}">{$product.regular_price}</span>
-                {if $product.discount_type === 'percentage'}
-                  <span class="discount-percentage discount-product">{$product.discount_percentage}</span>
-                {elseif $product.discount_type === 'amount'}
-                  <span class="discount-amount discount-product">{$product.discount_amount_to_display}</span>
-                {/if}
+        <div class="product-description">
+          {block name='product_name'}
+            <div>
+              {if $page.page_name == 'index'}
+                <h3 class="h3 product-title"><a href="{$product.url}" content="{$product.url}">{$product.name}
+                    {if $product.reference} - {$product.reference}{/if}</a></h3>
+              {else}
+                <h2 class="h3 product-title"><a href="{$product.url}" content="{$product.url}">{$product.name}
+                    {if $product.reference} - {$product.reference}{/if}</a></h2>
               {/if}
 
-              {hook h='displayProductPriceBlock' product=$product type="before_price"}
-
-              <span class="price" aria-label="{l s='Price' d='Shop.Theme.Catalog'}">
-                {capture name='custom_price'}{hook h='displayProductPriceBlock' product=$product type='custom_price' hook_origin='products_list'}{/capture}
-                {if '' !== $smarty.capture.custom_price}
-                  {$smarty.capture.custom_price nofilter}
-                {else}
-                  {$product.price}
-                {/if}
-              </span>
-
-              {hook h='displayProductPriceBlock' product=$product type='unit_price'}
-
-              {hook h='displayProductPriceBlock' product=$product type='weight'}
-
-              <form action="{$urls.pages.cart}" method="post">
-                <input type="hidden" name="token" value="{$static_token}">
-                <input type="hidden" value="{$product.id_product}" name="id_product">
-                {* <input type="number" class="input-group form-control" name="qty" value="1"> *}
-
-                  <button
-                  class="btn btn-primary mobytic_add_to_cart_productlist"
-                  data-button-action="add-to-cart"
-                  type="submit"
-                  {if !$product.add_to_cart_url}
-                    disabled
-                  {/if}
-                >
-                  <i class="material-icons shopping-cart">&#xE547;</i>
-                  {l s='Add' d='Shop.Theme.Actions'}
-                </button>
-              </form>
-
-
-
+              <div class="mobytic_product_list_short_description" style="display: none;">
+                {$product.description_short|strip_tags}
+              </div>
             </div>
-          {/if}
-        {/block}
+          {/block}
 
-        {block name='product_reviews'}
-          {hook h='displayProductListReviews' product=$product}
-        {/block}
+          {block name='product_price_and_shipping'}
+            {if $product.show_price}
+              <div class="product-price-and-shipping">
+
+                <div>
+                  {if $product.has_discount}
+                    {hook h='displayProductPriceBlock' product=$product type="old_price"}
+
+                    <span class="regular-price"
+                      aria-label="{l s='Regular price' d='Shop.Theme.Catalog'}">{$product.regular_price}</span>
+                    {if $product.discount_type === 'percentage'}
+                      <span class="discount-percentage discount-product">{$product.discount_percentage}</span>
+                    {elseif $product.discount_type === 'amount'}
+                      <span class="discount-amount discount-product">{$product.discount_amount_to_display}</span>
+                    {/if}
+                  {/if}
+
+                  {hook h='displayProductPriceBlock' product=$product type="before_price"}
+
+                  <span class="price" aria-label="{l s='Price' d='Shop.Theme.Catalog'}">
+                    {capture name='custom_price'}{hook h='displayProductPriceBlock' product=$product type='custom_price' hook_origin='products_list'}{/capture}
+                    {if '' !== $smarty.capture.custom_price}
+                      {$smarty.capture.custom_price nofilter}
+                    {else}
+                      {$product.price} (TTC)
+                    {/if}
+                  </span>
+
+                  <div class="mobytic_listing_qt mobytic_listing_cat" style="display: none;">
+                    <div>{$product.quantity} {l s='en stock' d='Shop.Theme.listing'}</div>
+                  </div>
+                </div>
+
+                {hook h='displayProductPriceBlock' product=$product type='unit_price'}
+
+                {hook h='displayProductPriceBlock' product=$product type='weight'}
+
+                <div>
+           
+                  <form action="{$urls.pages.cart}" method="post">
+                    <input type="hidden" name="token" value="{$static_token}">
+                    <input type="hidden" value="{$product.id_product}" name="id_product">
+                    {* <input type="number" class="input-group form-control" name="qty" value="1" style="display: none;"> *}
+                    <div class='mobytic_product-cart-quentity-inner'>
+                    <button type="button" class='mobytic_product-cart-quentity-decrement'>
+                      <i class="material-icons">remove</i>
+                    </button>
+                    <input type='number' class='mobytic_product-cart-quentity' name="qty" value='1'>
+                    <button type="button" class='mobytic_product-cart-quentity-increment'>
+                      <i class="material-icons">add</i>
+                    </button>
+                  </div>
+
+
+                    <button class="btn btn-primary mobytic_add_to_cart_productlist" data-button-action="add-to-cart"
+                      type="submit" {if !$product.add_to_cart_url} disabled {/if}>
+                      <i class="material-icons shopping-cart">&#xE547;</i>
+                      {l s='Add' d='Shop.Theme.Actions'}
+                    </button>
+                  </form>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="mobytic_listing_qt mobytic_listing_noncat">
+                  <div>{$product.quantity} {l s='en stock' d='Shop.Theme.listing'}</div>
+                </div>
+
+              </div>
+            {/if}
+          {/block}
+
+          {block name='product_reviews'}
+            {hook h='displayProductListReviews' product=$product}
+          {/block}
+        </div>
+
+        {include file='catalog/_partials/product-flags.tpl'}
       </div>
-
-      {include file='catalog/_partials/product-flags.tpl'}
-    </div>
-  </article>
-</div>
+    </article>
+  </div>
 {/block}

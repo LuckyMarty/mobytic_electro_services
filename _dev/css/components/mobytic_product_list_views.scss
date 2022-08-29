@@ -1,0 +1,273 @@
+.mobytic_product-grid-list-all-wrapper {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+@media (max-width: 767px) {
+    .mobytic_product-grid-list-all-wrapper {
+        margin-bottom: 15px;
+        -webkit-box-pack: flex-end;
+        -ms-flex-pack: flex-end;
+        justify-content: flex-end
+    }
+}
+
+@media (max-width: 575px) {
+    .mobytic_product-grid-list-all-wrapper {
+        margin-bottom: 15px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+}
+
+.tvcms-left-column-wrapper .tv-left-pannal-btn-wrapper,
+.tvcms-right-column-wrapper .tv-right-pannal-btn-wrapper,
+.mobytic_product-grid-list .mobytic_product-grid,
+.mobytic_product-grid-list .mobytic_product-grid-2,
+.mobytic_product-grid-list .mobytic_product-list,
+.mobytic_product-grid-list .mobytic_product-list-2,
+.mobytic_product-grid-list .mobytic_product-catelog,
+.tv_search_filter_wrapper .tvleft-right-title-wrapper {
+    float: left;
+    // background-color: #222;
+    color: #fff;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.mobytic_product-grid-list {
+    .mobytic_product-view {
+        opacity: 0.5;
+
+        &.active,
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+}
+
+.mobytic_product-grid-list .mobytic_product-grid {
+    width: 45px;
+    padding: 13px 9px;
+}
+
+.mobytic_product-grid-list .mobytic_product-grid-2 {
+    padding: 13px 10px;
+}
+
+.mobytic_product-grid-list .mobytic_product-list {
+    padding: 13px 9px;
+}
+
+.mobytic_product-grid-list .mobytic_product-list-2 {
+    padding: 13px 9px;
+}
+
+.mobytic_product-grid-list .mobytic_product-catelog {
+    margin-right: 0;
+    padding: 13px 8px;
+}
+
+.tvcms-left-column-wrapper .tv-left-pannal-btn-wrapper i,
+.tvcms-right-column-wrapper .tv-right-pannal-btn-wrapper i,
+.tv_search_filter_wrapper .tvleft-right-title-wrapper i,
+.mobytic_product-grid-list .mobytic_product-grid i,
+.mobytic_product-grid-list .mobytic_product-grid-2 i,
+.mobytic_product-grid-list .mobytic_product-list i,
+.mobytic_product-grid-list .mobytic_product-list-2 i,
+.mobytic_product-grid-list .mobytic_product-catelog i {
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    line-height: 24px;
+    text-align: center;
+    display: none
+}
+
+.tvcms-left-column-wrapper .tv-left-pannal-btn-wrapper span,
+.tvcms-right-column-wrapper .tv-right-pannal-btn-wrapper span,
+.tv_search_filter_wrapper .tvleft-right-title-wrapper span,
+.mobytic_product-grid-list .mobytic_product-grid span,
+.mobytic_product-grid-list .mobytic_product-grid-2 span,
+.mobytic_product-grid-list .mobytic_product-list span,
+.mobytic_product-grid-list .mobytic_product-list-2 span,
+.mobytic_product-grid-list .mobytic_product-catelog span {
+    display: none
+}
+
+@media (max-width: 991px) {
+
+    .tvcms-left-column-wrapper,
+    .tvcms-right-column-wrapper,
+    .mobytic_product-grid-list .mobytic_product-grid-2,
+    .mobytic_product-grid-list .mobytic_product-list-2 {
+        display: none
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// .mobytic_product-grid-list-wrapper-info-box {
+//     margin-bottom: 30px
+// }
+
+#products.grid-2 .mobytic_product-grid-list-wrapper-info-box {
+    width: 33.33%
+}
+
+#products.list .mobytic_product-grid-list-wrapper-info-box {
+    width: 100%;
+
+    .thumbnail-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        .product-description::after {
+            display: none;
+        }
+    }
+}
+
+#products.list-2 .mobytic_product-grid-list-wrapper-info-box {
+    width: 50%;
+
+    .thumbnail-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        .product-description::after {
+            display: none;
+        }
+
+        a.thumbnail {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: auto;
+        }
+    }
+}
+
+#products.catelog .mobytic_product-grid-list-wrapper-info-box {
+    width: 100%;
+
+    .thumbnail-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 2fr;
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+
+        .product-description::after {
+            display: none;
+        }
+
+        .product-description {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-content: center;
+            padding: 30px;
+
+            .mobytic_product_list_short_description,
+            .input-group.form-control,
+            .mobytic_listing_cat {
+                display: block !important;
+            }
+
+            .mobytic_listing_noncat {
+                display: none !important;
+            }
+
+            .product-price-and-shipping {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-content: center;
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+
+.mobytic_product-cart-quentity-inner {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mobytic_product-cart-quentity-increment,
+.mobytic_product-cart-quentity-decrement {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    cursor: pointer
+}
+.mobytic_product-cart-quentity {
+    height: 40px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    text-align: center
+}
+
+
+
+
+/** Popovers */
+
+.tvtooltip.popover {
+    border: none;
+    padding: 0;
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2);
+    border-radius: 4px;
+}
+
+.tvtooltip .popover-title {
+    background-color: transparent;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: normal;
+    border: none;
+}
+
+.tvtooltip .popover-content {
+    font-size: .750rem;
+    padding: 0;
+}
+
+.tvtooltip.popover.bs-tether-element-attached-bottom:before,
+.tvtooltip.popover.popover-top:before {
+    display: none;
+}

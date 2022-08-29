@@ -52,6 +52,7 @@ import './components/block-cart';
 
 import './mobytic_corrections';
 import './mobytic_ets_megamenu';
+import './mobytic_product_list_views';
 
 // WATERMARK
 // import './mobytic-lib/jquery.watermark';

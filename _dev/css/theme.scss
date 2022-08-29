@@ -42,6 +42,7 @@
 @import "components/mobytic_ets_megamenu";
 @import "components/mobytic_bootstrap";
 @import "components/mobytic_product_list";
+@import "components/mobytic_product_list_views";
 /* stylelint-enable */
 
 
@@ -56,6 +57,7 @@
 
 .price {
     color: $mobytic_color_4;
+    font-size: 16px;
 }
 
 #header {
@@ -395,6 +397,7 @@
                 &-top {
                     background-color: $mobytic_color_5;
                     padding: 40px;
+
                     @media (max-width: $mobytic_responsive_mobile) {
                         padding: 10px;
                     }

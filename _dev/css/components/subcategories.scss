@@ -48,6 +48,8 @@
 
       .subcategory-name {
         text-transform: uppercase;
+        color: $mobytic_color_1;
+        opacity: 0.4;
 
         &:hover {
           color: $brand-primary;

@@ -65,12 +65,17 @@ $product-description-height: 70px;
 
   .thumbnail-container {
     border-radius: 18px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
 
     position: relative;
     height: auto;
     margin-bottom: 1.563rem;
     overflow: hidden;
     background: $white;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,.4);
+    }
 
     @media (max-width: 576px) {
       width: 100%;
@@ -119,6 +124,8 @@ $product-description-height: 70px;
     margin-top: 0.7rem;
     text-align: center;
     text-transform: capitalize;
+
+    min-height: 60px;
   }
 
   .product-price-and-shipping {
