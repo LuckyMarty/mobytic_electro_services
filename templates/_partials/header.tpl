@@ -25,6 +25,32 @@
 {block name='header_banner'}
   <div class="header-banner">
     {hook h='displayBanner'}
+    
+
+    {* <div id="mobytic_ttc_ht_witch">
+    <label class="toggle">
+      <input type="checkbox" id="mobytic_ttc_ht"
+
+      {if $smarty.cookies['mobytic_TTC_HT'] === 'HT' }
+        checked        
+      {/if}
+
+      >
+      <span class="labels" data-on="HT" data-off="TTC"></span>
+    </label> *}
+    <label class="toggle-switchy" for="mobytic_ttc_ht" data-size="sm" data-style="rounded">
+      <input type="checkbox" id="mobytic_ttc_ht"
+        {if $smarty.cookies['mobytic_TTC_HT'] === 'TTC'}
+          checked        
+        {/if}
+      >
+      <span class="toggle" data-on="TTC" data-off="HT">
+        <span class="switch"></span>
+      </span>
+    </label>
+
+  </div>
+
   </div>
 {/block}
 

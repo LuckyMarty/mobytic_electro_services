@@ -54,7 +54,10 @@
         <span class="product-quantity">{$product.quantity}</span>
       </div>
       <div class="col-xs-4">
-        <span class="product-price float-xs-right">{$product.price}</span>
+        <span class="product-price float-xs-right">
+          {* {$product.price} *}
+          {include file='../../catalog/_partials/mobytic_price_ttc_ht.tpl'}
+        </span>
       </div>
     </div>
 

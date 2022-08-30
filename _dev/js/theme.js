@@ -53,6 +53,7 @@ import './components/block-cart';
 import './mobytic_corrections';
 import './mobytic_ets_megamenu';
 import './mobytic_product_list_views';
+import './mobytic_ttc_ht';
 
 // WATERMARK
 // import './mobytic-lib/jquery.watermark';
@@ -107,7 +108,7 @@ $(document).ready(() => {
 
 // Mobytic - Block Reassurance
 $(document).ready(() => {
-  if(document.querySelector('#contact')) {
+  if (document.querySelector('#contact')) {
     const contact_page_infos_divs = document.querySelectorAll('#contact #mobytic-contact-infos')[0].children.length;
     document.documentElement.style.setProperty("--contact_page_infos_divs", contact_page_infos_divs);
   }

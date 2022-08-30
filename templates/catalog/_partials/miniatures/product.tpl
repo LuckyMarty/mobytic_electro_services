@@ -102,7 +102,8 @@
                     {if '' !== $smarty.capture.custom_price}
                       {$smarty.capture.custom_price nofilter}
                     {else}
-                      {$product.price} (TTC)
+                      {* {$product.price} (TTC) *}
+                      {include file='../mobytic_price_ttc_ht.tpl'}
                     {/if}
                   </span>
 

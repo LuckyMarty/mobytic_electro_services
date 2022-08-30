@@ -57,7 +57,10 @@
         </div>
       {/if}
       <div class="current-price">
-        <span class="price">{$product.price}</span>
+        <span class="price">
+          {* {$product.price} *}
+          {include file='../../catalog/_partials/mobytic_price_ttc_ht.tpl'}
+        </span>
         {if $product.unit_price_full}
           <div class="unit-price-cart">{$product.unit_price_full}</div>
         {/if}
@@ -147,7 +150,8 @@
                 {if !empty($product.is_gift)}
                   <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
                 {else}
-                  {$product.total}
+                  {* {$product.total} *}
+                  {include file='../../catalog/_partials/mobytic_price_ttc_ht_total.tpl'}
                 {/if}
               </strong>
             </span>

@@ -61,12 +61,10 @@
   </div>
 
 
-
-
   <div class="col-sm-12 col-md-12 col-lg-12 mobytic_product-grid-list-all-wrapper">
     <div class="mobytic_product-grid-list clearfix">
-      <div class="mobytic_product-view mobytic_product-grid" data-toggle="tvtooltip" data-placement="top" data-html="true" title=""
-        data-original-title="{l s='Grille 4' d='Shop.Theme.Actions'}">
+      <div class="mobytic_product-view mobytic_product-grid" data-toggle="tvtooltip" data-placement="top"
+        data-html="true" title="" data-original-title="{l s='Grille 4' d='Shop.Theme.Actions'}">
         {* <i class='material-icons grid'>&#xe5c3;</i> *}
         <svg class="tvgrid" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33px" height="13px" viewBox="0 0 33 13"
@@ -104,8 +102,8 @@
         </svg>
         <span class="tvgrid-wrapper">{l s='Grille 4' d='Shop.Theme.Actions'}</span>
       </div>
-      <div class="mobytic_product-view mobytic_product-grid-2" data-toggle="tvtooltip" data-placement="top" data-html="true"
-        title="" data-original-title="{l s='Grille 3' d='Shop.Theme.Actions'}">
+      <div class="mobytic_product-view mobytic_product-grid-2" data-toggle="tvtooltip" data-placement="top"
+        data-html="true" title="" data-original-title="{l s='Grille 3' d='Shop.Theme.Actions'}">
         {* <i class='material-icons grid-2'>&#xe5c3;</i> *}
         <svg class="tvgrid-2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26px" height="13px" viewBox="0 0 26 13"
@@ -137,8 +135,8 @@
         </svg>
         <span class="tvgrid-2-wrapper">{l s='Grille 3' d='Shop.Theme.Actions'}</span>
       </div>
-      <div class="mobytic_product-view mobytic_product-list" data-toggle="tvtooltip" data-placement="top" data-html="true" title=""
-        data-original-title="{l s='Liste' d='Shop.Theme.Actions'}">
+      <div class="mobytic_product-view mobytic_product-list" data-toggle="tvtooltip" data-placement="top"
+        data-html="true" title="" data-original-title="{l s='Liste' d='Shop.Theme.Actions'}">
         {* <i class='material-icons list'>&#xe241;</i> *}
         <svg class="tvlist" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="13px" viewBox="0 0 20 13"
@@ -160,8 +158,8 @@
         </svg>
         <span class="tvlist-wrapper">{l s='Liste' d='Shop.Theme.Actions'}</span>
       </div>
-      <div class="mobytic_product-view mobytic_product-list-2" data-toggle="tvtooltip" data-placement="top" data-html="true"
-        title="" data-original-title="{l s='Liste 2' d='Shop.Theme.Actions'}">
+      <div class="mobytic_product-view mobytic_product-list-2" data-toggle="tvtooltip" data-placement="top"
+        data-html="true" title="" data-original-title="{l s='Liste 2' d='Shop.Theme.Actions'}">
         {* <i class='material-icons list-2'>&#xe241;</i> *}
         <svg class="tvlist-2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="13px" viewBox="0 0 22 13"
@@ -219,8 +217,8 @@
         </svg>
         <span class="tvlist-wrapper">{l s='Liste 2' d='Shop.Theme.Actions'}</span>
       </div>
-      <div class="mobytic_product-view mobytic_product-catelog" data-toggle="tvtooltip" data-placement="top" data-html="true"
-        title="" data-original-title="{l s='Catalogue' d='Shop.Theme.Actions'}">
+      <div class="mobytic_product-view mobytic_product-catelog" data-toggle="tvtooltip" data-placement="top"
+        data-html="true" title="" data-original-title="{l s='Catalogue' d='Shop.Theme.Actions'}">
         {* <i class='material-icons catelog'>&#xe241;</i> *}
         <svg class="tvcatelog" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="13px" viewBox="0 0 21 13"

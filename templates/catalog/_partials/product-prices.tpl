@@ -42,16 +42,17 @@
             {if '' !== $smarty.capture.custom_price}
               {$smarty.capture.custom_price nofilter}
             {else}
-              {$product.price}
+              {* {$product.price} *}
+              {include file='./mobytic_price_ttc_ht.tpl'}
             {/if}
 
-            (
+            {* (
             {if !$configuration.taxes_enabled}
               {l s='No tax' d='Shop.Theme.Catalog'}
             {elseif $configuration.display_taxes_label}
               {$product.labels.tax_long}
             {/if}
-            )
+            ) *}
           </span>
 
           {if $product.has_discount}

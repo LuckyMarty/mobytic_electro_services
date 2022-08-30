@@ -30,7 +30,7 @@
       <div class="cart-summary-line cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
 
         <span class="label">
-            {$subtotal.label}
+          {$subtotal.label}
         </span>
 
         <span class="value">
@@ -40,5 +40,6 @@
     {/if}
   {/foreach}
 
-</div>
+  {include file='./mobytic_price_ttc_ht_total_summary.tpl'}
 
+</div>
