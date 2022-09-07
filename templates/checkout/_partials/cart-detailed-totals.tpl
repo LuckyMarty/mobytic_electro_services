@@ -25,25 +25,18 @@
 {block name='cart_detailed_totals'}
   <div class="cart-detailed-totals js-cart-detailed-totals">
 
+    {* {$cart|var_dump} *}
+
     <div class="card-block cart-detailed-subtotals js-cart-detailed-subtotals">
       {foreach from=$cart.subtotals item="subtotal"}
         {if $subtotal && $subtotal.value|count_characters > 0 && $subtotal.type !== 'tax'}
-          <div class="cart-summary-line" id="cart-subtotal-{$subtotal.type}">
+          <div class="cart-summary-line {$subtotal.type}-{$smarty.cookies['mobytic_TTC_HT']}" id="cart-subtotal-{$subtotal.type}">
 
-            <span class="label{if 'products' === $subtotal.type} js-subtotal{/if}">
-              {if 'products' == $subtotal.type}
-                {$cart.summary_string}
-              {else}
-                {$subtotal.label}
-              {/if}
-            </span>
-
-            <span class="value">
-              {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
-            </span>
+            {include file="./mobytic_price_ht_total.tpl"}
 
             {if $subtotal.type === 'shipping'}
               <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div>
+              {* <input class="mobytic_priceShipping" type="hidden" value="{$carrier.price_without_tax}"> *}
             {/if}
 
           </div>

@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (li.querySelector('.mm_columns_contents_ul')) {
   
               if (tab_lvl_1_height < 400) {
-                li.querySelector('.mm_columns_contents_ul').style.height = '400px';
+                li.querySelector('.mm_columns_contents_ul').style.minHeight = '400px';
               } else {
                 li.querySelector('.mm_columns_contents_ul').style.height = (tab_lvl_1_height) + 'px';
               }
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (li.querySelector('.mm_columns_contents_ul')) {
   
               if (tab_lvl_1_height < 400) {
-                li.querySelector('.mm_columns_contents_ul').style.height = '400px';
+                li.querySelector('.mm_columns_contents_ul').style.minHeight = '400px';
               } else {
                 li.querySelector('.mm_columns_contents_ul').style.height = (tab_lvl_1_height) + 'px';
               }

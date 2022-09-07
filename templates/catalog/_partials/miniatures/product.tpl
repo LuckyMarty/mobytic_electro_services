@@ -66,10 +66,17 @@
             <div>
               {if $page.page_name == 'index'}
                 <h3 class="h3 product-title"><a href="{$product.url}" content="{$product.url}">{$product.name}
-                    {if $product.reference} - {$product.reference}{/if}</a></h3>
+                    {if $product.reference}
+                      - {$product.reference}
+                    {/if}
+
+                  </a></h3>
               {else}
                 <h2 class="h3 product-title"><a href="{$product.url}" content="{$product.url}">{$product.name}
-                    {if $product.reference} - {$product.reference}{/if}</a></h2>
+                    {if $product.reference}
+                      - {$product.reference}
+                    {/if}
+                  </a></h2>
               {/if}
 
               <div class="mobytic_product_list_short_description" style="display: none;">
@@ -117,20 +124,20 @@
                 {hook h='displayProductPriceBlock' product=$product type='weight'}
 
                 <div>
-           
+
                   <form action="{$urls.pages.cart}" method="post">
                     <input type="hidden" name="token" value="{$static_token}">
                     <input type="hidden" value="{$product.id_product}" name="id_product">
                     {* <input type="number" class="input-group form-control" name="qty" value="1" style="display: none;"> *}
                     <div class='mobytic_product-cart-quentity-inner'>
-                    <button type="button" class='mobytic_product-cart-quentity-decrement'>
-                      <i class="material-icons">remove</i>
-                    </button>
-                    <input type='number' class='mobytic_product-cart-quentity' name="qty" value='1'>
-                    <button type="button" class='mobytic_product-cart-quentity-increment'>
-                      <i class="material-icons">add</i>
-                    </button>
-                  </div>
+                      <button type="button" class='mobytic_product-cart-quentity-decrement'>
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <input type='number' class='mobytic_product-cart-quentity' name="qty" value='1'>
+                      <button type="button" class='mobytic_product-cart-quentity-increment'>
+                        <i class="material-icons">add</i>
+                      </button>
+                    </div>
 
 
                     <button class="btn btn-primary mobytic_add_to_cart_productlist" data-button-action="add-to-cart"

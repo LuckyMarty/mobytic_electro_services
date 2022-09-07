@@ -1,86 +1,18 @@
-// #mobytic_ttc_ht_witch {
-//   position: fixed;
-//   top: 50%;
-//   right: 0;
-//   transform: translateY(-50%) rotate(90deg);
-
-//   .toggle {
-//     --width: 50px;
-//     --height: calc(var(--width) / 3);
-
-//     position: relative;
-//     display: inline-block;
-//     width: var(--width);
-//     height: var(--height);
-//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-//     cursor: pointer;
-
-//     input:checked~.labels {
-//       &::after {
-//         transform: translateX(var(--width));
-//       }
-
-//       &::before {
-//         transform: translateX(var(--width));
-//       }
-//     }
-//   }
-
-//   input {
-//     display: none;
-//   }
-
-//   .labels {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     font-size: 12px;
-//     font-family: sans-serif;
-//     transition: all 0.4s ease-in-out;
-//     overflow: hidden;
-
-//     &::after {
-//       content: attr(data-off);
-//       font-weight: bold;
-//       position: absolute;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       top: 0;
-//       left: 0;
-//       height: 100%;
-//       width: 100%;
-//       color: white;
-//       background-color: #dec300;
-//       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-//       transition: all 0.4s ease-in-out;
-//     }
-
-//     &::before {
-//       content: attr(data-on);
-//       font-weight: bold;
-//       position: absolute;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       top: 0;
-//       left: calc(var(--width) * -1);
-//       height: 100%;
-//       width: 100%;
-//       color: white;
-//       background-color: #dec300;
-//       text-align: center;
-//       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
-//       transition: all 0.4s ease-in-out;
-//     }
-//   }
-// }
+#header {
+  .header-banner {
+    #_mobytic_ttc_ht {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+}
 
 
-
-
+#_mobytic_ttc_ht {
+  display: flex;
+}
 
 
 /* Customizable styles */
@@ -144,23 +76,21 @@ CORE STYLES BELOW - NO TOUCHY
   display: inline-flex;
   align-items: center;
   user-select: none;
-  position: fixed;
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translate(25%, -50%) rotate(90deg);
-  vertical-align: middle;
-  margin-bottom: 0;
+  // position: fixed;
+  // top: 50%;
+  // right: 0;
+  // transform: translate(25%, -50%) rotate(90deg);
+  // vertical-align: middle;
+  // margin-bottom: 0;
 
   @media (max-width: 768px) {
-    top: unset;
-    bottom: 0;
+    position: fixed;
+    bottom: -8px;
     left: 75px;
     padding-bottom: 5px;
     background: #371313;
     width: fit-content;
     border-radius: 15px 15px 0 0;
-    transform: unset;
   }
 }
 

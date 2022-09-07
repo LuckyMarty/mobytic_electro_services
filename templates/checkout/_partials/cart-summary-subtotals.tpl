@@ -24,21 +24,24 @@
  *}
 
 <div class="card-block cart-summary-subtotals-container js-cart-summary-subtotals-container">
+{* {$cart|var_dump} *}
 
   {foreach from=$cart.subtotals item="subtotal"}
     {if $subtotal && $subtotal.value|count_characters > 0 && $subtotal.type !== 'tax'}
-      <div class="cart-summary-line cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
+      <div class="cart-summary-line cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}"> 
 
         <span class="label">
           {$subtotal.label}
         </span>
 
         <span class="value">
-          {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
+          {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value} TTC
         </span>
       </div>
     {/if}
   {/foreach}
+  <input id="inOrderPageShippingChangeOrNot"type="hidden" value="{$cart.subtotals.shipping.amount}">
+  {* {$cart|var_dump} *}
 
   {include file='./mobytic_price_ttc_ht_total_summary.tpl'}
 
