@@ -21,10 +21,11 @@
     .caption {
       position: absolute;
       top: 50%;
-      left: 15%;
-      max-width: 400px;
-      color: $mobytic_color_3;
-      transform: translate(0, -50%);
+      left: 50%;
+      // max-width: 400px;
+      color: $mobytic_color_2;
+      transform: translate(-50%, -50%);
+      text-align: center;
 
       .caption-description {
         p {
